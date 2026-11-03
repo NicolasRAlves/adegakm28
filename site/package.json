@@ -1,0 +1,10 @@
+{
+  "name": "adega-km28-cardapio",
+  "private": true,
+  "type": "module",
+  "description": "Cardápio digital da Adega KM28 com pedido pelo WhatsApp",
+  "scripts": {
+    "test": "node --test",
+    "prerender": "node ../ferramentas/prerender.mjs"
+  }
+}

@@ -1,0 +1,773 @@
+{
+ "assets/img/produtos/heineken.webp": {
+  "titulo": "File:Heineken - Can - Canette.jpg",
+  "w": 320,
+  "h": 320,
+  "foco": "50% 45%"
+ },
+ "assets/img/produtos/heineken-ln.webp": {
+  "titulo": "File:Heineken Bottle. James Bond Edition.jpg",
+  "w": 320,
+  "h": 320,
+  "foco": "50% 45%",
+  "modo": "conter"
+ },
+ "assets/img/produtos/original.webp": {
+  "titulo": "File:Antarctica Cerveja Original Pilsen (4808716912).jpg",
+  "w": 320,
+  "h": 320,
+  "foco": "50% 45%"
+ },
+ "assets/img/produtos/budweiser.webp": {
+  "titulo": "File:A bottle of Budweiser.JPG",
+  "w": 320,
+  "h": 320,
+  "foco": "50% 45%",
+  "modo": "conter"
+ },
+ "assets/img/produtos/amstel.webp": {
+  "titulo": "File:An Amstel Beer made in Jordan.jpg",
+  "w": 320,
+  "h": 320,
+  "foco": "50% 45%"
+ },
+ "assets/img/produtos/spaten.webp": {
+  "titulo": "File:Spaten Hell.jpg",
+  "w": 320,
+  "h": 320,
+  "foco": "50% 45%",
+  "modo": "conter"
+ },
+ "assets/img/produtos/corona.webp": {
+  "titulo": "File:Corona Extra beer bottle (2019).png",
+  "w": 320,
+  "h": 320,
+  "foco": "50% 45%",
+  "modo": "conter"
+ },
+ "assets/img/produtos/coca-lata.webp": {
+  "titulo": "File:Coca-cola 50cl can - Italia.jpg",
+  "w": 320,
+  "h": 320,
+  "foco": "50% 45%"
+ },
+ "assets/img/home/hero.webp": {
+  "titulo": "File:CERVEZA.jpg",
+  "w": 960,
+  "h": 560,
+  "foco": "50% 50%",
+  "q": 0.62
+ },
+ "assets/img/home/cat-cervejas.webp": {
+  "titulo": "File:Green bottle of Heineken 2.JPG",
+  "w": 360,
+  "h": 240,
+  "foco": "50% 50%",
+  "q": 0.66
+ },
+ "assets/img/home/cat-whisky.webp": {
+  "titulo": "File:Giant ice cube in whiskey glass (18495546988).jpg",
+  "w": 360,
+  "h": 240,
+  "foco": "50% 50%",
+  "q": 0.66
+ },
+ "assets/img/home/cat-gin.webp": {
+  "titulo": "File:Gin and tonic with lime.jpg",
+  "w": 360,
+  "h": 240,
+  "foco": "50% 50%",
+  "q": 0.66
+ },
+ "assets/img/home/cat-doses.webp": {
+  "titulo": "File:Whiskey with spherical ice.jpg",
+  "w": 360,
+  "h": 240,
+  "foco": "50% 50%",
+  "q": 0.66
+ },
+ "assets/img/home/cat-refri.webp": {
+  "titulo": "File:Fanta cans in Thailand 2021.jpg",
+  "w": 360,
+  "h": 240,
+  "foco": "50% 50%",
+  "q": 0.66
+ },
+ "assets/img/sabores/menta.webp": {
+  "titulo": "File:Mentha sp.001 - A Pobra do Caramiñal.JPG",
+  "w": 200,
+  "h": 200,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/sabores/melancia.webp": {
+  "titulo": "File:Slice of Watermelon from Wilson Farm, Lexington MA.jpg",
+  "w": 200,
+  "h": 200,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/sabores/uva.webp": {
+  "titulo": "File:Close up of fresh red grapes at Sadarghat fruit market Dhaka.jpg",
+  "w": 200,
+  "h": 200,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/sabores/maca-verde.webp": {
+  "titulo": "File:Green apple 01.jpg",
+  "w": 200,
+  "h": 200,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/sabores/morango.webp": {
+  "titulo": "File:Garden strawberry (Fragaria × ananassa) single2.jpg",
+  "w": 200,
+  "h": 200,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/sabores/pessego.webp": {
+  "titulo": "File:Autumn Red peaches.jpg",
+  "w": 200,
+  "h": 200,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/sabores/limao.webp": {
+  "titulo": "File:Lemon.jpg",
+  "w": 200,
+  "h": 200,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/sabores/mirtilo.webp": {
+  "titulo": "File:Dish of blueberries.jpg",
+  "w": 200,
+  "h": 200,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/produtos/agua.webp": {
+  "titulo": "File:Bisleri PET water bottles with Telugu labels.jpg",
+  "w": 320,
+  "h": 320,
+  "foco": "50% 50%"
+ },
+ "assets/img/produtos/agua-gas.webp": {
+  "titulo": "File:Sparkling Water with Mint in Glass Cup.jpg",
+  "w": 320,
+  "h": 320,
+  "foco": "50% 55%"
+ },
+ "assets/img/produtos/salgadinho.webp": {
+  "titulo": "File:Potato-Chips.jpg",
+  "w": 320,
+  "h": 320,
+  "foco": "50% 50%"
+ },
+ "assets/img/produtos/chocolate.webp": {
+  "titulo": "File:Milka Alpine Milk Chocolate bar 100g.jpg",
+  "w": 320,
+  "h": 320,
+  "foco": "50% 50%",
+  "modo": "conter",
+  "zoom": 0.9
+ },
+ "assets/img/home/cat-essencias.webp": {
+  "titulo": "File:Shisha-edit.png",
+  "w": 360,
+  "h": 240,
+  "modo": "conter",
+  "q": 0.66
+ },
+ "assets/img/home/cat-aguas.webp": {
+  "titulo": "File:Bisleri PET water bottles with Telugu labels.jpg",
+  "w": 360,
+  "h": 240,
+  "foco": "50% 50%",
+  "q": 0.66
+ },
+ "assets/img/home/cat-mercearia.webp": {
+  "titulo": "File:073 Potato chips, Sanok.JPG",
+  "w": 360,
+  "h": 240,
+  "foco": "50% 50%",
+  "q": 0.66
+ },
+ "assets/img/sabores/abacaxi.webp": {
+  "titulo": "File:Pineapple fruit 2.jpg",
+  "w": 200,
+  "h": 200,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/sabores/acai.webp": {
+  "titulo": "File:Açaí na tigela.jpeg",
+  "w": 200,
+  "h": 200,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/sabores/banana.webp": {
+  "titulo": "File:Bananas on black background 02.jpg",
+  "w": 200,
+  "h": 200,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/sabores/coco.webp": {
+  "titulo": "File:Coconuts - single and cracked open.jpg",
+  "w": 200,
+  "h": 200,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/sabores/cereja.webp": {
+  "titulo": "File:Cherry Stella444.jpg",
+  "w": 200,
+  "h": 200,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/sabores/framboesa.webp": {
+  "titulo": "File:Raspberry - whole (Rubus idaeus).jpg",
+  "w": 200,
+  "h": 200,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/sabores/frutas-tropicais.webp": {
+  "titulo": "File:ARS tropical fruit no labels.jpg",
+  "w": 200,
+  "h": 200,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/sabores/laranja.webp": {
+  "titulo": "File:Orange-Fruit-Pieces.jpg",
+  "w": 200,
+  "h": 200,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/sabores/manga.webp": {
+  "titulo": "File:Mangos - single and halved.jpg",
+  "w": 200,
+  "h": 200,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/sabores/maracuja.webp": {
+  "titulo": "File:Passion fruits - whole and halved.jpg",
+  "w": 200,
+  "h": 200,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/sabores/sorvete-pistache.webp": {
+  "titulo": "File:Pistachio ice cream.jpg",
+  "w": 200,
+  "h": 200,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/sabores/tangerina.webp": {
+  "titulo": "File:Tangerine 2009-03-11.jpg",
+  "w": 200,
+  "h": 200,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/sabores/tropical.webp": {
+  "titulo": "File:Pineapple Juice fruits-465832.jpg",
+  "w": 200,
+  "h": 200,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/sabores/iogurte.webp": {
+  "titulo": "File:Yogurt fruit bowl.jpg",
+  "w": 200,
+  "h": 200,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/sabores/limonada-vermelha.webp": {
+  "titulo": "File:Лимонад.jpg",
+  "w": 200,
+  "h": 200,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/sabores/pink-lemonade.webp": {
+  "titulo": "File:LemonadeJuly2006.JPG",
+  "w": 200,
+  "h": 200,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/home/cat-narguile.webp": {
+  "titulo": "File:A hand carefully arranges charcoal pieces on a hookah bowl, readying it for use.jpg",
+  "w": 360,
+  "h": 240,
+  "foco": "50% 50%",
+  "q": 0.66
+ },
+ "assets/img/loja/ziggy.webp": {
+  "pagina": "https://www.tabacariapremium.com.br",
+  "autor": "Tabacaria Premium",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://cdn.awsli.com.br/800x800/1373/1373609/produto/54419532/fad0d4a284.jpg",
+  "titulo": "Essência Ziggy 50 g",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.78
+ },
+ "assets/img/loja/ziggy-pink-lemonade.webp": {
+  "pagina": "https://www.tabacariapremium.com.br",
+  "autor": "Tabacaria Premium",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://cdn.awsli.com.br/800x800/1373/1373609/produto/404217931/025110f313f940daa33e152617c3c8a0-j7msoz9x5g.jpg",
+  "titulo": "Ziggy Pink Lemonade",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.78
+ },
+ "assets/img/loja/ziggy-happy-frutti.webp": {
+  "pagina": "https://www.tabacariapremium.com.br",
+  "autor": "Tabacaria Premium",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://cdn.awsli.com.br/800x800/1373/1373609/produto/54419532/aad91acaa6.jpg",
+  "titulo": "Ziggy Happy Frutti",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.78
+ },
+ "assets/img/loja/ziggy-happy-berry.webp": {
+  "pagina": "https://www.tabacariapremium.com.br",
+  "autor": "Tabacaria Premium",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://cdn.awsli.com.br/800x800/1373/1373609/produto/54419532/37cfc0bae9.jpg",
+  "titulo": "Ziggy Happy Berry",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.78
+ },
+ "assets/img/loja/ziggy-tropical.webp": {
+  "pagina": "https://www.tabacariapremium.com.br",
+  "autor": "Tabacaria Premium",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://cdn.awsli.com.br/800x800/1373/1373609/produto/54419532/5f0405d3bd.jpg",
+  "titulo": "Ziggy Tropical",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.78
+ },
+ "assets/img/loja/onix.webp": {
+  "pagina": "https://www.tabacariapremium.com.br",
+  "autor": "Tabacaria Premium",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://cdn.awsli.com.br/800x800/1373/1373609/produto/126887686/26b5a3716a.jpg",
+  "titulo": "Essência Onix 50 g",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.78
+ },
+ "assets/img/loja/onix-coke.webp": {
+  "pagina": "https://www.tabacariapremium.com.br",
+  "autor": "Tabacaria Premium",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://cdn.awsli.com.br/800x800/1373/1373609/produto/244594077/essencia-onix-coca-psag5chx1p.png",
+  "titulo": "Onix Coke",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.78
+ },
+ "assets/img/loja/onix-drops.webp": {
+  "pagina": "https://www.tabacariapremium.com.br",
+  "autor": "Tabacaria Premium",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://cdn.awsli.com.br/800x800/1373/1373609/produto/220163035/design-sem-nome-ludbihsckx.png",
+  "titulo": "Onix Drops",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.78
+ },
+ "assets/img/loja/onix-kiwi-drops.webp": {
+  "pagina": "https://www.tabacariapremium.com.br",
+  "autor": "Tabacaria Premium",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://cdn.awsli.com.br/800x800/1373/1373609/produto/378026085/4a74f9bc-3d40-47fc-9163-97488c4c7ab2-h4rkqe7ixf.jpg",
+  "titulo": "Onix Kiwi Drops",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.78
+ },
+ "assets/img/loja/onix-purple-drops.webp": {
+  "pagina": "https://www.tabacariapremium.com.br",
+  "autor": "Tabacaria Premium",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://cdn.awsli.com.br/800x800/1373/1373609/produto/378024922/c26b7b80-d5da-40ea-bb51-5f3c72dc9970-gtkr8m2nuk.jpg",
+  "titulo": "Onix Purple Drops",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.78
+ },
+ "assets/img/loja/onix-red-drops.webp": {
+  "pagina": "https://www.tabacariapremium.com.br",
+  "autor": "Tabacaria Premium",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://cdn.awsli.com.br/800x800/1373/1373609/produto/231731584/essencia-onix-red-drops-nur89myyuw.png",
+  "titulo": "Onix Red Drops",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.78
+ },
+ "assets/img/loja/onix-goiaba-morango.webp": {
+  "pagina": "https://www.tabacariapremium.com.br",
+  "autor": "Tabacaria Premium",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://cdn.awsli.com.br/800x800/1373/1373609/produto/245541640/timthumb-w94ljxd57t.jpg",
+  "titulo": "Onix Goiaba e Morango",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.78
+ },
+ "assets/img/loja/onix-melao.webp": {
+  "pagina": "https://www.tabacariapremium.com.br",
+  "autor": "Tabacaria Premium",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://cdn.awsli.com.br/800x800/1373/1373609/produto/361120182/09c6c9d0-1d74-46e1-8490-628149efb9c8-ok20th74zl.jpg",
+  "titulo": "Onix Melão",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.78
+ },
+ "assets/img/loja/carvao.webp": {
+  "pagina": "https://www.tabacariapremium.com.br",
+  "autor": "Tabacaria Premium",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://cdn.awsli.com.br/800x800/1373/1373609/produto/402504994/2509c2af8cfe4bb38a2d5fe334e99838-m3r5lt6xuu.png",
+  "titulo": "Carvão de coco hexagonal",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.78
+ },
+ "assets/img/loja/aluminio.webp": {
+  "pagina": "https://www.tabacariapremium.com.br",
+  "autor": "Tabacaria Premium",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://cdn.awsli.com.br/800x800/1373/1373609/produto/226291684/papel-aluminio-para-narguile-tb-25-folhas-ds23u995ci.png",
+  "titulo": "Papel alumínio para narguilé",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.78
+ },
+ "assets/img/loja/rosh.webp": {
+  "pagina": "https://www.tabacariapremium.com.br",
+  "autor": "Tabacaria Premium",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://cdn.awsli.com.br/800x800/1373/1373609/produto/252767929/rosh-basic-bowl-preto--1--vkribxp80j.png",
+  "titulo": "Rosh Basic Bowl",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.78
+ },
+ "assets/img/loja/abafador.webp": {
+  "pagina": "https://www.tabacariapremium.com.br",
+  "autor": "Tabacaria Premium",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://cdn.awsli.com.br/800x800/1373/1373609/produto/225018249/abafador-narguile-dourado-3o5lfmqfii.png",
+  "titulo": "Abafador dourado",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.78
+ },
+ "assets/img/loja/narguile-completo.webp": {
+  "pagina": "https://www.tabacariapremium.com.br",
+  "autor": "Tabacaria Premium",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://cdn.awsli.com.br/800x800/1373/1373609/produto/404766127/conjunto-de-cachimbo-dourado-com-acess-rios-6daf143c-6k76pr4xid.png",
+  "titulo": "Kit narguilé completo",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.78
+ },
+ "assets/img/loja/prime-gold-label.webp": {
+  "pagina": "https://www.espacoprime.com.br",
+  "autor": "Espaço Prime",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://espacoprime.fbitsstatic.net/img/p/johnnie-walker-gold-label-reserve-blended-scotch-whisky-750ml-71390/257703-1.jpg?w=800&h=800&v=no-change&qs=ignore",
+  "titulo": "johnnie walker gold label reserve blended scotch whisky 750ml",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.8
+ },
+ "assets/img/loja/prime-double-black.webp": {
+  "pagina": "https://www.espacoprime.com.br",
+  "autor": "Espaço Prime",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://espacoprime.fbitsstatic.net/img/p/johnnie-walker-double-black-blended-scotch-whisky-1l-71434/257737-1.jpg?w=800&h=800&v=no-change&qs=ignore",
+  "titulo": "johnnie walker double black blended scotch whisky 1l",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.8
+ },
+ "assets/img/loja/prime-black-label.webp": {
+  "pagina": "https://www.espacoprime.com.br",
+  "autor": "Espaço Prime",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://espacoprime.fbitsstatic.net/img/p/johnnie-walker-black-label-12-anos-blended-scotch-whisky-750ml-71361/257680-1.jpg?w=800&h=800&v=no-change&qs=ignore",
+  "titulo": "johnnie walker black label 12 anos blended scotch whisky 750ml",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.8
+ },
+ "assets/img/loja/prime-buchanans.webp": {
+  "pagina": "https://www.espacoprime.com.br",
+  "autor": "Espaço Prime",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://espacoprime.fbitsstatic.net/img/p/buchanans-deluxe-12-anos-blended-scotch-whisky-750ml-71421/257729-1.jpg?w=800&h=800&v=no-change&qs=ignore",
+  "titulo": "buchanans deluxe 12 anos blended scotch whisky 750ml",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.8
+ },
+ "assets/img/loja/prime-combo-buchanans.webp": {
+  "pagina": "https://www.espacoprime.com.br",
+  "autor": "Espaço Prime",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://espacoprime.fbitsstatic.net/img/p/combo-buchanans-750ml-4-red-bull-250ml-2-copos-de-acrilico-72342/258242-1.jpg?w=800&h=800&v=no-change&qs=ignore",
+  "titulo": "combo buchanans 750ml 4 red bull 250ml 2 copos de acrilico",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.8
+ },
+ "assets/img/loja/prime-jack.webp": {
+  "pagina": "https://www.espacoprime.com.br",
+  "autor": "Espaço Prime",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://espacoprime.fbitsstatic.net/img/p/jack-daniels-old-n-7-tennessee-whiskey-700ml-73219/259209-1.jpg?w=800&h=800&v=no-change&qs=ignore",
+  "titulo": "jack daniels old n 7 tennessee whiskey 700ml",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.8
+ },
+ "assets/img/loja/prime-jack-apple.webp": {
+  "pagina": "https://www.espacoprime.com.br",
+  "autor": "Espaço Prime",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://espacoprime.fbitsstatic.net/img/p/jack-daniels-apple-licor-de-whiskey-e-maca-verde-700ml-73216/259206-1.jpg?w=800&h=800&v=no-change&qs=ignore",
+  "titulo": "jack daniels apple licor de whiskey e maca verde 700ml",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.8
+ },
+ "assets/img/loja/prime-old-parr.webp": {
+  "pagina": "https://www.espacoprime.com.br",
+  "autor": "Espaço Prime",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://espacoprime.fbitsstatic.net/img/p/grand-old-parr-12-anos-blended-scotch-whisky-750ml-73125/259104-1.jpg?w=800&h=800&v=no-change&qs=ignore",
+  "titulo": "grand old parr 12 anos blended scotch whisky 750ml",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.8
+ },
+ "assets/img/loja/prime-red-label.webp": {
+  "pagina": "https://www.espacoprime.com.br",
+  "autor": "Espaço Prime",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://espacoprime.fbitsstatic.net/img/p/johnnie-walker-red-label-blended-scotch-whisky-750ml-72527/258347-1.jpg?w=800&h=800&v=no-change&qs=ignore",
+  "titulo": "johnnie walker red label blended scotch whisky 750ml",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.8
+ },
+ "assets/img/loja/prime-white-horse.webp": {
+  "pagina": "https://www.espacoprime.com.br",
+  "autor": "Espaço Prime",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://espacoprime.fbitsstatic.net/img/p/white-horse-blended-scotch-whisky-700ml-70808/257321-1.jpg?w=800&h=800&v=no-change&qs=ignore",
+  "titulo": "white horse blended scotch whisky 700ml",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.8
+ },
+ "assets/img/loja/prime-combo-white-horse.webp": {
+  "pagina": "https://www.espacoprime.com.br",
+  "autor": "Espaço Prime",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://espacoprime.fbitsstatic.net/img/p/combo-white-horse-1l-4-red-bull-250ml-2-copos-de-acrilico-72155/258135-1.jpg?w=800&h=800&v=no-change&qs=ignore",
+  "titulo": "combo white horse 1l 4 red bull 250ml 2 copos de acrilico",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.8
+ },
+ "assets/img/loja/prime-ballantines.webp": {
+  "pagina": "https://www.espacoprime.com.br",
+  "autor": "Espaço Prime",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://espacoprime.fbitsstatic.net/img/p/ballantines-finest-blended-scotch-whisky-750ml-71053/257474-1.jpg?w=800&h=800&v=no-change&qs=ignore",
+  "titulo": "ballantines finest blended scotch whisky 750ml",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.8
+ },
+ "assets/img/loja/prime-tanqueray.webp": {
+  "pagina": "https://www.espacoprime.com.br",
+  "autor": "Espaço Prime",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://espacoprime.fbitsstatic.net/img/p/gin-tanqueray-750ml-71436/257739-1.jpg?w=800&h=800&v=no-change&qs=ignore",
+  "titulo": "gin tanqueray 750ml",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.8
+ },
+ "assets/img/loja/prime-beefeater-pink.webp": {
+  "pagina": "https://www.espacoprime.com.br",
+  "autor": "Espaço Prime",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://espacoprime.fbitsstatic.net/img/p/gin-beefeater-pink-750ml-71066/257482-1.jpg?w=800&h=800&v=no-change&qs=ignore",
+  "titulo": "gin beefeater pink 750ml",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.8
+ },
+ "assets/img/loja/prime-gordons.webp": {
+  "pagina": "https://www.espacoprime.com.br",
+  "autor": "Espaço Prime",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://espacoprime.fbitsstatic.net/img/p/gordons-london-dry-gin-750ml-71484/257763-1.jpg?w=800&h=800&v=no-change&qs=ignore",
+  "titulo": "gordons london dry gin 750ml",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.8
+ },
+ "assets/img/loja/prime-gordons-pink.webp": {
+  "pagina": "https://www.espacoprime.com.br",
+  "autor": "Espaço Prime",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://espacoprime.fbitsstatic.net/img/p/gordons-pink-gin-700ml-71335/257662-1.jpg?w=800&h=800&v=no-change&qs=ignore",
+  "titulo": "gordons pink gin 700ml",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.8
+ },
+ "assets/img/loja/prime-schweppes.webp": {
+  "pagina": "https://www.espacoprime.com.br",
+  "autor": "Espaço Prime",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://espacoprime.fbitsstatic.net/img/p/schweppes-citrus-original-350ml-70181/256694-1.jpg?w=800&h=800&v=no-change&qs=ignore",
+  "titulo": "schweppes citrus original 350ml",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.8
+ },
+ "assets/img/loja/prime-combo-beefeater.webp": {
+  "pagina": "https://www.espacoprime.com.br",
+  "autor": "Espaço Prime",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://espacoprime.fbitsstatic.net/img/p/combo-beefeater-gin-750ml-4-red-bull-tropical-edition-250ml-2-tacas-de-acrilico-72363/258256-1.jpg?w=800&h=800&v=no-change&qs=ignore",
+  "titulo": "Combo Beefeater + Red Bull Tropical",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.8
+ },
+ "assets/img/loja/prime-combo-bombay.webp": {
+  "pagina": "https://www.espacoprime.com.br",
+  "autor": "Espaço Prime",
+  "licenca": "uso autorizado pela loja",
+  "url": "https://espacoprime.fbitsstatic.net/img/p/combo-tropical-gin-1-bombay-sapphire-750ml-4-red-bull-tropical-250ml-2-tacas-bombay-72359/258252-1.jpg?w=800&h=800&v=no-change&qs=ignore",
+  "titulo": "Combo Bombay Sapphire + Red Bull Tropical",
+  "w": 320,
+  "h": 320,
+  "modo": "conter",
+  "zoom": 0.96,
+  "q": 0.8
+ },
+ "assets/img/home/capa-cervejas.webp": {
+  "url": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RpZgU4j5C-TwzvAr-K1FNBONmgqJgIaxL28lLXbdpR63SVuwPFO3DrI8oVEACO87J8G2lapDeVmRUFP8-tifg68WVlWw1sC3c-cW9ubPSDMpADlIJxFcwNKqqqMMw9SPZ6wWk=s680-w680-h510-rw",
+  "titulo": "Cervejas Corona (capa)",
+  "autor": "foto enviada pelo cliente",
+  "licenca": "uso autorizado",
+  "pagina": "https://www.google.com/maps",
+  "w": 960,
+  "h": 400,
+  "foco": "50% 50%",
+  "q": 0.7
+ }
+}

@@ -1,0 +1,979 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Adega KM28 · Cardápio e delivery de bebidas</title>
+  <meta name="description" content="Cardápio da Adega KM28 no Jardim São Rafael, São Paulo: cervejas, combos de whisky e gin, doses e refrigerantes. Monte o pedido e envie pelo WhatsApp. Entrega rápida.">
+  <meta name="theme-color" content="#0C0C0C">
+  <meta name="color-scheme" content="dark">
+  <meta name="format-detection" content="telephone=no">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Adega KM28">
+  <meta property="og:title" content="Adega KM28 · Cardápio · Peça pelo WhatsApp">
+  <meta property="og:description" content="Cerveja trincando e destilados de qualidade. Monte seu pedido e envie pelo WhatsApp. O rolê começa aqui.">
+  <meta property="og:image" content="assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Selo da Adega KM28 com o texto Cardápio · Peça pelo WhatsApp">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <link rel="preload" href="assets/img/home/hero.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preload" href="assets/fonts/jakarta-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/bebas-neue-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="modulepreload" href="js/app.js">
+  <link rel="modulepreload" href="data/config.js">
+  <link rel="modulepreload" href="js/util.js">
+  <link rel="modulepreload" href="js/catalogo.js">
+  <link rel="modulepreload" href="js/carrinho.js">
+  <link rel="modulepreload" href="js/horario.js">
+  <link rel="modulepreload" href="js/whatsapp.js">
+  <link rel="modulepreload" href="js/checkout.js">
+  <link rel="modulepreload" href="js/pix.js">
+  <link rel="modulepreload" href="js/render.js">
+  <link rel="preload" href="data/catalogo.json" as="fetch" crossorigin>
+  <link rel="stylesheet" href="assets/css/app.css">
+  <script>(function(d){var i=null;try{i=JSON.parse(localStorage.getItem('km28.idade'))}catch(e){}if(i)d.dataset.idade=i;else d.dataset.portao='1'})(document.documentElement)</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LiquorStore",
+    "name": "Adega KM28",
+    "slogan": "O rolê começa aqui",
+    "description": "Cerveja trincando e destilados de qualidade. Entrega rápida.",
+    "image": "assets/img/og.png",
+    "logo": "assets/icons/icon-512.png",
+    "telephone": "+55-11-91581-7410",
+    "priceRange": "R$",
+    "currenciesAccepted": "BRL",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Frei Amador Arrais, 58",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "postalCode": "04860-050",
+      "addressCountry": "BR"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday"], "opens": "09:00", "closes": "23:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Thursday", "Friday", "Saturday", "Sunday"], "opens": "11:00", "closes": "02:00" }
+    ],
+    "sameAs": ["https://www.instagram.com/adegakm28"]
+  }
+  </script>
+</head>
+<body>
+  <a class="pular" href="#lista">Pular para o cardápio</a>
+
+  <header class="topo">
+    <a class="marca" href="#" aria-label="Adega KM28, voltar ao topo">
+      <img src="assets/icons/selo-96.png" width="44" height="44" alt="">
+      <div class="marca-txt">
+        <h1 class="marca-nome">Adega <b>KM28</b></h1>
+        <span class="marca-slogan">O rolê começa aqui</span>
+      </div>
+    </a>
+    <p class="status" id="status" aria-live="polite"><span class="ponto"></span><span id="status-txt" class="status-longo">Carregando horário…</span><span id="status-curto" class="status-curto" aria-hidden="true"></span></p>
+  </header>
+
+  <div class="aviso-dia" id="aviso-dia" hidden>
+    <svg aria-hidden="true"><use href="#i-megafone"/></svg><p id="aviso-dia-txt"></p>
+  </div>
+  <div class="fechado" id="aviso-fechado" hidden>
+    <svg aria-hidden="true"><use href="#i-relogio"/></svg>
+    <p>Estamos fechados agora. Você pode montar o pedido; respondemos assim que abrirmos.</p>
+  </div>
+  <div class="menor" id="aviso-menor" hidden>
+    <p>Você informou ter menos de 18 anos. Mostramos só os itens sem álcool.</p>
+    <button type="button" class="link" id="refazer-idade">Respondi errado</button>
+  </div>
+
+  <div class="layout">
+    <main class="coluna-catalogo" id="conteudo">
+      <section class="hero" aria-labelledby="hero-titulo">
+        <img class="hero-foto" src="assets/img/home/hero.webp" alt="" width="960" height="560" fetchpriority="high" decoding="async">
+        <div class="hero-txt">
+          <p class="hero-kicker">Cerveja trincando · Destilados</p>
+          <h2 class="hero-titulo" id="hero-titulo">Chama que <span>levamos até você!</span></h2>
+          <ul class="hero-infos">
+            <li><svg aria-hidden="true"><use href="#i-moto"/></svg>Entrega rápida</li>
+            <li class="hero-horario-item"><svg aria-hidden="true"><use href="#i-relogio"/></svg><span id="hero-horario">Qui a dom até 02h</span></li>
+            <li><svg aria-hidden="true"><use href="#i-pix"/></svg>Pix ou na entrega</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="ferramentas">
+        <label class="busca">
+          <span class="sr">Buscar no cardápio</span>
+          <svg aria-hidden="true"><use href="#i-busca"/></svg>
+          <input type="search" id="busca" placeholder="Buscar: heineken, gin, coca…" autocomplete="off" enterkeyhint="search">
+        </label>
+        <button type="button" class="btn-icone" id="alternar-modo" aria-label="Mostrar em grade" title="Mostrar em grade">
+          <svg aria-hidden="true"><use href="#i-grade"/></svg>
+        </button>
+      </div>
+
+      <button type="button" class="repetir" id="repetir-ultimo" hidden>
+        <svg aria-hidden="true"><use href="#i-repetir"/></svg>
+        <span id="repetir-txt">Repetir último pedido</span>
+      </button>
+
+      <nav class="atalhos" id="atalhos" aria-label="Atalhos das categorias"><!--CATALOGO-ATALHOS-->
+<a class="atalho" href="#cervejas" data-alvo="cervejas" data-alcool="1">
+<span class="atalho-foto"><img src="assets/img/home/cat-cervejas.webp" alt="" width="180" height="120" loading="lazy" decoding="async"></span>
+<span class="atalho-nome">Cervejas</span>
+<span class="atalho-qtd">14 itens</span>
+</a><a class="atalho" href="#combos-whisky" data-alvo="combos-whisky" data-alcool="1">
+<span class="atalho-foto"><img src="assets/img/home/cat-whisky.webp" alt="" width="180" height="120" loading="lazy" decoding="async"></span>
+<span class="atalho-nome">Combos Whisky</span>
+<span class="atalho-qtd">10 itens</span>
+</a><a class="atalho" href="#combos-gin" data-alvo="combos-gin" data-alcool="1">
+<span class="atalho-foto"><img src="assets/img/home/cat-gin.webp" alt="" width="180" height="120" loading="lazy" decoding="async"></span>
+<span class="atalho-nome">Combos Gin</span>
+<span class="atalho-qtd">9 itens</span>
+</a><a class="atalho" href="#doses-whisky" data-alvo="doses-whisky" data-alcool="1">
+<span class="atalho-foto"><img src="assets/img/home/cat-doses.webp" alt="" width="180" height="120" loading="lazy" decoding="async"></span>
+<span class="atalho-nome">Doses de Whisky</span>
+<span class="atalho-qtd">9 itens</span>
+</a><a class="atalho" href="#narguile" data-alvo="narguile" data-alcool="1">
+<span class="atalho-foto"><img src="assets/img/home/cat-essencias.webp" alt="" width="180" height="120" loading="lazy" decoding="async"></span>
+<span class="atalho-nome">Narguilé e Essências</span><span class="atalho-novo">Novo</span>
+<span class="atalho-qtd">8 itens</span>
+</a><a class="atalho" href="#cigarros" data-alvo="cigarros" data-alcool="1">
+<span class="atalho-foto"><svg aria-hidden="true"><use href="#i-cigarro"/></svg></span>
+<span class="atalho-nome">Cigarros</span>
+<span class="atalho-qtd">4 itens</span>
+</a><a class="atalho" href="#refrigerantes" data-alvo="refrigerantes">
+<span class="atalho-foto"><img src="assets/img/home/cat-refri.webp" alt="" width="180" height="120" loading="lazy" decoding="async"></span>
+<span class="atalho-nome">Refrigerantes</span>
+<span class="atalho-qtd">7 itens</span>
+</a><a class="atalho" href="#agua" data-alvo="agua">
+<span class="atalho-foto"><img src="assets/img/home/cat-aguas.webp" alt="" width="180" height="120" loading="lazy" decoding="async"></span>
+<span class="atalho-nome">Águas e sem álcool</span>
+<span class="atalho-qtd">3 itens</span>
+</a><a class="atalho" href="#mercearia" data-alvo="mercearia">
+<span class="atalho-foto"><img src="assets/img/home/cat-mercearia.webp" alt="" width="180" height="120" loading="lazy" decoding="async"></span>
+<span class="atalho-nome">Mercearia</span>
+<span class="atalho-qtd">2 itens</span>
+</a>
+<!--/CATALOGO-ATALHOS--></nav>
+
+      <nav class="abas" aria-label="Categorias">
+        <div class="abas-trilho" id="abas"><!--CATALOGO-ABAS-->
+<button type="button" class="aba" data-alvo="destaques" data-alcool="1">Destaques</button><button type="button" class="aba" data-alvo="cervejas" data-alcool="1">Cervejas</button><button type="button" class="aba" data-alvo="combos-whisky" data-alcool="1">Combos Whisky</button><button type="button" class="aba" data-alvo="combos-gin" data-alcool="1">Combos Gin</button><button type="button" class="aba" data-alvo="doses-whisky" data-alcool="1">Doses de Whisky</button><button type="button" class="aba" data-alvo="narguile" data-alcool="1">Narguilé e Essências</button><button type="button" class="aba" data-alvo="cigarros" data-alcool="1">Cigarros</button><button type="button" class="aba" data-alvo="refrigerantes">Refrigerantes</button><button type="button" class="aba" data-alvo="agua">Águas e sem álcool</button><button type="button" class="aba" data-alvo="mercearia">Mercearia</button>
+<!--/CATALOGO-ABAS--></div>
+      </nav>
+
+      <div id="lista" class="lista modo-lista" tabindex="-1" data-assinatura="10y79de"><!--CATALOGO-LISTA-->
+<section class="secao secao-destaques" id="destaques" aria-labelledby="t-destaques" data-alcool="1">
+<div class="secao-topo"><h2 id="t-destaques">Destaques</h2>
+<button type="button" class="btn-compartilhar" data-acao="compartilhar-cat" data-cat="destaques" data-nome="Destaques" aria-label="Compartilhar Destaques"><svg aria-hidden="true"><use href="#i-compartilhar"/></svg></button></div>
+<div class="carrossel-bloco">
+<h3 class="carrossel-titulo"><svg aria-hidden="true"><use href="#i-estrela"/></svg>Novidades</h3>
+<div class="itens carrossel"><article class="item com-foto" data-id="essencia-ziggy-pink-lemonade" data-busca="ziggy pink lemonade essencia · pacote 50 g narguile rosh ziggy limonada tabaco essencia" data-subgrupo="Essências">
+<div class="item-icone"><img src="assets/img/loja/ziggy-pink-lemonade.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Ziggy Pink Lemonade <span class="selos"><span class="selo selo-novidade"><svg aria-hidden="true"><use href="#i-estrela"/></svg>Novidade</span></span></h3>
+<p class="item-sub"><span class="item-det">essência · pacote 50 g</span><span class="item-linha-preco"><span class="preco">R$ 18,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 18,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="essencia-ziggy-pink-lemonade" aria-label="Adicionar Ziggy Pink Lemonade, essência · pacote 50 g"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article></div>
+</div>
+<div class="carrossel-bloco">
+<h3 class="carrossel-titulo"><svg aria-hidden="true"><use href="#i-fogo"/></svg>Mais pedidos</h3>
+<div class="itens carrossel"><article class="item com-foto" data-id="original-15" data-busca="antarctica original lata · pack com 15">
+<div class="item-icone"><img src="assets/img/produtos/original.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Antarctica Original <span class="selos"><span class="selo selo-mais-pedido"><svg aria-hidden="true"><use href="#i-fogo"/></svg>Mais pedido</span></span></h3>
+<p class="item-sub"><span class="item-det">lata · pack com 15</span><span class="item-linha-preco"><span class="preco">R$ 58,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 58,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="original-15" aria-label="Adicionar Antarctica Original, lata · pack com 15"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" data-id="heineken-8" data-busca="heineken lata · pack com 8">
+<div class="item-icone"><img src="assets/img/produtos/heineken.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Heineken <span class="selos"><span class="selo selo-mais-pedido"><svg aria-hidden="true"><use href="#i-fogo"/></svg>Mais pedido</span></span></h3>
+<p class="item-sub"><span class="item-det">lata · pack com 8</span><span class="item-linha-preco"><span class="preco">R$ 38,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 38,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="heineken-8" aria-label="Adicionar Heineken, lata · pack com 8"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" data-id="cw-black-label" data-busca="black label garrafa + 4 red bull + gelo  4 gelos de coco 1 saco de gelo 5 kg red bull">
+<div class="item-icone"><img src="assets/img/loja/prime-black-label.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Black Label <span class="selos"><span class="selo selo-mais-pedido"><svg aria-hidden="true"><use href="#i-fogo"/></svg>Mais pedido</span></span></h3>
+<p class="item-sub"><span class="item-det">garrafa + 4 Red Bull + gelo</span><span class="item-linha-preco"><span class="preco">R$ 220,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 220,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="cw-black-label" aria-label="Adicionar Black Label, garrafa + 4 Red Bull + gelo"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item" data-id="gin-rocks" data-busca="rocks gelo de coco + energetico  red bull bally">
+<div class="item-icone"><svg aria-hidden="true"><use href="#i-gin"/></svg></div>
+<div class="item-txt">
+<h3 class="item-nome">Rocks <span class="selos"><span class="selo selo-mais-pedido"><svg aria-hidden="true"><use href="#i-fogo"/></svg>Mais pedido</span></span></h3>
+<p class="item-sub"><span class="item-det">gelo de coco + energético</span><span class="item-linha-preco"><span class="apartir">a partir de</span><span class="preco">R$ 70,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="apartir">a partir de</span><span class="preco">R$ 70,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="gin-rocks" aria-label="Adicionar Rocks, gelo de coco + energético"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" data-id="dose-red-label" data-busca="red label dose com energetico  vibe red bull">
+<div class="item-icone"><img src="assets/img/loja/prime-red-label.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Red Label <span class="selos"><span class="selo selo-mais-pedido"><svg aria-hidden="true"><use href="#i-fogo"/></svg>Mais pedido</span></span></h3>
+<p class="item-sub"><span class="item-det">dose com energético</span><span class="item-linha-preco"><span class="apartir">a partir de</span><span class="preco">R$ 30,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="apartir">a partir de</span><span class="preco">R$ 30,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="dose-red-label" aria-label="Adicionar Red Label, dose com energético"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article></div>
+</div>
+<div class="carrossel-bloco">
+<h3 class="carrossel-titulo"><svg aria-hidden="true"><use href="#i-etiqueta"/></svg>Em promoção</h3>
+<div class="itens carrossel"><article class="item" data-id="skol-15" data-busca="skol lata · pack com 15">
+<div class="item-icone"><svg aria-hidden="true"><use href="#i-lata"/></svg></div>
+<div class="item-txt">
+<h3 class="item-nome">Skol <span class="selos"><span class="selo selo-promo"><svg aria-hidden="true"><use href="#i-etiqueta"/></svg>Promo</span></span></h3>
+<p class="item-sub"><span class="item-det">lata · pack com 15</span><span class="item-linha-preco"><span class="preco">R$ 43,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 43,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="skol-15" aria-label="Adicionar Skol, lata · pack com 15"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" data-id="cw-red-label" data-busca="red label garrafa + 4 red bull + gelo  4 gelos de coco 1 saco de gelo 5 kg red bull">
+<div class="item-icone"><img src="assets/img/loja/prime-red-label.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Red Label <span class="selos"><span class="selo selo-promo"><svg aria-hidden="true"><use href="#i-etiqueta"/></svg>Promo</span></span></h3>
+<p class="item-sub"><span class="item-det">garrafa + 4 Red Bull + gelo</span><span class="item-linha-preco"><span class="preco">R$ 140,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 140,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="cw-red-label" aria-label="Adicionar Red Label, garrafa + 4 Red Bull + gelo"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article></div>
+</div>
+</section><section class="secao com-capa" id="cervejas" aria-labelledby="t-cervejas" data-alcool="1">
+<div class="secao-capa" aria-hidden="true">
+<img src="assets/img/home/capa-cervejas.webp" alt="" width="960" height="400" loading="lazy" decoding="async">
+<span class="capa-titulo">Cervejas</span>
+<span class="capa-qtd">14 itens</span>
+</div>
+<div class="secao-topo">
+<h2 id="t-cervejas">Cervejas</h2><span class="qtd">14 itens</span>
+<button type="button" class="btn-compartilhar" data-acao="compartilhar-cat" data-cat="cervejas" data-nome="Cervejas" aria-label="Compartilhar Cervejas"><svg aria-hidden="true"><use href="#i-compartilhar"/></svg></button>
+</div>
+<div class="itens"><article class="item com-foto" id="p-original-8" data-id="original-8" data-busca="antarctica original lata · pack com 8">
+<div class="item-icone"><img src="assets/img/produtos/original.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Antarctica Original</h3>
+<p class="item-sub"><span class="item-det">lata · pack com 8</span><span class="item-linha-preco"><span class="preco">R$ 32,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 32,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="original-8" aria-label="Adicionar Antarctica Original, lata · pack com 8"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-original-15" data-id="original-15" data-busca="antarctica original lata · pack com 15">
+<div class="item-icone"><img src="assets/img/produtos/original.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Antarctica Original <span class="selos"><span class="selo selo-mais-pedido"><svg aria-hidden="true"><use href="#i-fogo"/></svg>Mais pedido</span></span></h3>
+<p class="item-sub"><span class="item-det">lata · pack com 15</span><span class="item-linha-preco"><span class="preco">R$ 58,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 58,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="original-15" aria-label="Adicionar Antarctica Original, lata · pack com 15"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-budweiser-8" data-id="budweiser-8" data-busca="budweiser lata · pack com 8">
+<div class="item-icone"><img src="assets/img/produtos/budweiser.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Budweiser</h3>
+<p class="item-sub"><span class="item-det">lata · pack com 8</span><span class="item-linha-preco"><span class="preco">R$ 32,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 32,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="budweiser-8" aria-label="Adicionar Budweiser, lata · pack com 8"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-budweiser-15" data-id="budweiser-15" data-busca="budweiser lata · pack com 15">
+<div class="item-icone"><img src="assets/img/produtos/budweiser.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Budweiser</h3>
+<p class="item-sub"><span class="item-det">lata · pack com 15</span><span class="item-linha-preco"><span class="preco">R$ 58,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 58,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="budweiser-15" aria-label="Adicionar Budweiser, lata · pack com 15"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item" id="p-skol-15" data-id="skol-15" data-busca="skol lata · pack com 15">
+<div class="item-icone"><svg aria-hidden="true"><use href="#i-lata"/></svg></div>
+<div class="item-txt">
+<h3 class="item-nome">Skol <span class="selos"><span class="selo selo-promo"><svg aria-hidden="true"><use href="#i-etiqueta"/></svg>Promo</span></span></h3>
+<p class="item-sub"><span class="item-det">lata · pack com 15</span><span class="item-linha-preco"><span class="preco">R$ 43,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 43,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="skol-15" aria-label="Adicionar Skol, lata · pack com 15"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-amstel-12" data-id="amstel-12" data-busca="amstel lata · pack com 12">
+<div class="item-icone"><img src="assets/img/produtos/amstel.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Amstel</h3>
+<p class="item-sub"><span class="item-det">lata · pack com 12</span><span class="item-linha-preco"><span class="preco">R$ 39,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 39,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="amstel-12" aria-label="Adicionar Amstel, lata · pack com 12"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-heineken-8" data-id="heineken-8" data-busca="heineken lata · pack com 8">
+<div class="item-icone"><img src="assets/img/produtos/heineken.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Heineken <span class="selos"><span class="selo selo-mais-pedido"><svg aria-hidden="true"><use href="#i-fogo"/></svg>Mais pedido</span></span></h3>
+<p class="item-sub"><span class="item-det">lata · pack com 8</span><span class="item-linha-preco"><span class="preco">R$ 38,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 38,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="heineken-8" aria-label="Adicionar Heineken, lata · pack com 8"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item" id="p-heineken-zero-8" data-id="heineken-zero-8" data-busca="heineken 0.0 lata · pack com 8 sem-alcool">
+<div class="item-icone"><svg aria-hidden="true"><use href="#i-lata"/></svg></div>
+<div class="item-txt">
+<h3 class="item-nome">Heineken 0.0 <span class="selos"><span class="selo selo-sem-alcool">Sem álcool</span></span></h3>
+<p class="item-sub"><span class="item-det">lata · pack com 8</span><span class="item-linha-preco"><span class="preco">R$ 40,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 40,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="heineken-zero-8" aria-label="Adicionar Heineken 0.0, lata · pack com 8"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item" id="p-petra-12" data-id="petra-12" data-busca="petra lata · pack com 12">
+<div class="item-icone"><svg aria-hidden="true"><use href="#i-lata"/></svg></div>
+<div class="item-txt">
+<h3 class="item-nome">Petra</h3>
+<p class="item-sub"><span class="item-det">lata · pack com 12</span><span class="item-linha-preco"><span class="preco">R$ 35,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 35,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="petra-12" aria-label="Adicionar Petra, lata · pack com 12"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item" id="p-itaipava-12" data-id="itaipava-12" data-busca="itaipava lata · pack com 12">
+<div class="item-icone"><svg aria-hidden="true"><use href="#i-lata"/></svg></div>
+<div class="item-txt">
+<h3 class="item-nome">Itaipava</h3>
+<p class="item-sub"><span class="item-det">lata · pack com 12</span><span class="item-linha-preco"><span class="preco">R$ 32,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 32,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="itaipava-12" aria-label="Adicionar Itaipava, lata · pack com 12"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-spaten-8" data-id="spaten-8" data-busca="spaten lata · pack com 8">
+<div class="item-icone"><img src="assets/img/produtos/spaten.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Spaten</h3>
+<p class="item-sub"><span class="item-det">lata · pack com 8</span><span class="item-linha-preco"><span class="preco">R$ 32,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 32,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="spaten-8" aria-label="Adicionar Spaten, lata · pack com 8"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-corona-ln-6" data-id="corona-ln-6" data-busca="corona long neck · pack com 6 long-neck">
+<div class="item-icone"><img src="assets/img/produtos/corona.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Corona</h3>
+<p class="item-sub"><span class="item-det">long neck · pack com 6</span><span class="item-linha-preco"><span class="preco">R$ 48,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 48,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="corona-ln-6" aria-label="Adicionar Corona, long neck · pack com 6"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-heineken-ln-6" data-id="heineken-ln-6" data-busca="heineken long neck · pack com 6 long-neck">
+<div class="item-icone"><img src="assets/img/produtos/heineken-ln.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Heineken</h3>
+<p class="item-sub"><span class="item-det">long neck · pack com 6</span><span class="item-linha-preco"><span class="preco">R$ 48,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 48,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="heineken-ln-6" aria-label="Adicionar Heineken, long neck · pack com 6"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item" id="p-heineken-zero-ln-6" data-id="heineken-zero-ln-6" data-busca="heineken 0.0 long neck · pack com 6 sem-alcool long-neck">
+<div class="item-icone"><svg aria-hidden="true"><use href="#i-longneck"/></svg></div>
+<div class="item-txt">
+<h3 class="item-nome">Heineken 0.0 <span class="selos"><span class="selo selo-sem-alcool">Sem álcool</span></span></h3>
+<p class="item-sub"><span class="item-det">long neck · pack com 6</span><span class="item-linha-preco"><span class="preco">R$ 50,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 50,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="heineken-zero-ln-6" aria-label="Adicionar Heineken 0.0, long neck · pack com 6"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article></div>
+</section><section class="secao" id="combos-whisky" aria-labelledby="t-combos-whisky" data-alcool="1">
+<div class="secao-topo">
+<h2 id="t-combos-whisky">Combos Whisky</h2><span class="qtd">10 itens</span>
+<button type="button" class="btn-compartilhar" data-acao="compartilhar-cat" data-cat="combos-whisky" data-nome="Combos Whisky" aria-label="Compartilhar Combos Whisky"><svg aria-hidden="true"><use href="#i-compartilhar"/></svg></button>
+</div>
+<p class="secao-nota"><svg aria-hidden="true"><use href="#i-gelo"/></svg><span>Garrafa + 4 Red Bull + 4 gelos de coco ou 1 saco de gelo 5 kg</span></p>
+<div class="itens"><article class="item com-foto" id="p-cw-gold-label" data-id="cw-gold-label" data-busca="gold label garrafa + 4 red bull + gelo  4 gelos de coco 1 saco de gelo 5 kg red bull">
+<div class="item-icone"><img src="assets/img/loja/prime-gold-label.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Gold Label</h3>
+<p class="item-sub"><span class="item-det">garrafa + 4 Red Bull + gelo</span><span class="item-linha-preco"><span class="preco">R$ 290,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 290,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="cw-gold-label" aria-label="Adicionar Gold Label, garrafa + 4 Red Bull + gelo"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-cw-double-black" data-id="cw-double-black" data-busca="double black garrafa + 4 red bull + gelo  4 gelos de coco 1 saco de gelo 5 kg red bull">
+<div class="item-icone"><img src="assets/img/loja/prime-double-black.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Double Black</h3>
+<p class="item-sub"><span class="item-det">garrafa + 4 Red Bull + gelo</span><span class="item-linha-preco"><span class="preco">R$ 270,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 270,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="cw-double-black" aria-label="Adicionar Double Black, garrafa + 4 Red Bull + gelo"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-cw-black-label" data-id="cw-black-label" data-busca="black label garrafa + 4 red bull + gelo  4 gelos de coco 1 saco de gelo 5 kg red bull">
+<div class="item-icone"><img src="assets/img/loja/prime-black-label.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Black Label <span class="selos"><span class="selo selo-mais-pedido"><svg aria-hidden="true"><use href="#i-fogo"/></svg>Mais pedido</span></span></h3>
+<p class="item-sub"><span class="item-det">garrafa + 4 Red Bull + gelo</span><span class="item-linha-preco"><span class="preco">R$ 220,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 220,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="cw-black-label" aria-label="Adicionar Black Label, garrafa + 4 Red Bull + gelo"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-cw-buchanans" data-id="cw-buchanans" data-busca="buchanan&#39;s garrafa + 4 red bull + gelo  4 gelos de coco 1 saco de gelo 5 kg red bull">
+<div class="item-icone"><img src="assets/img/loja/prime-combo-buchanans.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Buchanan&#39;s</h3>
+<p class="item-sub"><span class="item-det">garrafa + 4 Red Bull + gelo</span><span class="item-linha-preco"><span class="preco">R$ 220,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 220,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="cw-buchanans" aria-label="Adicionar Buchanan&#39;s, garrafa + 4 Red Bull + gelo"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-cw-jack" data-id="cw-jack" data-busca="jack daniel&#39;s garrafa + 4 red bull + gelo  4 gelos de coco 1 saco de gelo 5 kg red bull">
+<div class="item-icone"><img src="assets/img/loja/prime-jack.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Jack Daniel&#39;s</h3>
+<p class="item-sub"><span class="item-det">garrafa + 4 Red Bull + gelo</span><span class="item-linha-preco"><span class="preco">R$ 190,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 190,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="cw-jack" aria-label="Adicionar Jack Daniel&#39;s, garrafa + 4 Red Bull + gelo"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-cw-jack-maca" data-id="cw-jack-maca" data-busca="jack daniel&#39;s maca verde garrafa + 4 red bull + gelo apple 4 gelos de coco 1 saco de gelo 5 kg red bull">
+<div class="item-icone"><img src="assets/img/loja/prime-jack-apple.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Jack Daniel&#39;s Maçã Verde</h3>
+<p class="item-sub"><span class="item-det">garrafa + 4 Red Bull + gelo</span><span class="item-linha-preco"><span class="preco">R$ 230,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 230,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="cw-jack-maca" aria-label="Adicionar Jack Daniel&#39;s Maçã Verde, garrafa + 4 Red Bull + gelo"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-cw-old-parr" data-id="cw-old-parr" data-busca="old parr garrafa + 4 red bull + gelo  4 gelos de coco 1 saco de gelo 5 kg red bull">
+<div class="item-icone"><img src="assets/img/loja/prime-old-parr.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Old Parr</h3>
+<p class="item-sub"><span class="item-det">garrafa + 4 Red Bull + gelo</span><span class="item-linha-preco"><span class="preco">R$ 190,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 190,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="cw-old-parr" aria-label="Adicionar Old Parr, garrafa + 4 Red Bull + gelo"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-cw-red-label" data-id="cw-red-label" data-busca="red label garrafa + 4 red bull + gelo  4 gelos de coco 1 saco de gelo 5 kg red bull">
+<div class="item-icone"><img src="assets/img/loja/prime-red-label.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Red Label <span class="selos"><span class="selo selo-promo"><svg aria-hidden="true"><use href="#i-etiqueta"/></svg>Promo</span></span></h3>
+<p class="item-sub"><span class="item-det">garrafa + 4 Red Bull + gelo</span><span class="item-linha-preco"><span class="preco">R$ 140,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 140,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="cw-red-label" aria-label="Adicionar Red Label, garrafa + 4 Red Bull + gelo"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-cw-cavalo-branco" data-id="cw-cavalo-branco" data-busca="cavalo branco garrafa + 4 red bull + gelo  4 gelos de coco 1 saco de gelo 5 kg red bull">
+<div class="item-icone"><img src="assets/img/loja/prime-combo-white-horse.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Cavalo Branco</h3>
+<p class="item-sub"><span class="item-det">garrafa + 4 Red Bull + gelo</span><span class="item-linha-preco"><span class="preco">R$ 130,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 130,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="cw-cavalo-branco" aria-label="Adicionar Cavalo Branco, garrafa + 4 Red Bull + gelo"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-cw-ballantines" data-id="cw-ballantines" data-busca="ballantine&#39;s garrafa + 4 red bull + gelo  4 gelos de coco 1 saco de gelo 5 kg red bull">
+<div class="item-icone"><img src="assets/img/loja/prime-ballantines.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Ballantine&#39;s</h3>
+<p class="item-sub"><span class="item-det">garrafa + 4 Red Bull + gelo</span><span class="item-linha-preco"><span class="preco">R$ 130,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 130,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="cw-ballantines" aria-label="Adicionar Ballantine&#39;s, garrafa + 4 Red Bull + gelo"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article></div>
+</section><section class="secao" id="combos-gin" aria-labelledby="t-combos-gin" data-alcool="1">
+<div class="secao-topo">
+<h2 id="t-combos-gin">Combos Gin</h2><span class="qtd">9 itens</span>
+<button type="button" class="btn-compartilhar" data-acao="compartilhar-cat" data-cat="combos-gin" data-nome="Combos Gin" aria-label="Compartilhar Combos Gin"><svg aria-hidden="true"><use href="#i-compartilhar"/></svg></button>
+</div>
+<p class="secao-nota"><svg aria-hidden="true"><use href="#i-gin"/></svg><span>Todos acompanham gelo de coco + o energético que você escolher</span></p>
+<div class="itens"><article class="item" id="p-gin-tanqueray-bossa" data-id="gin-tanqueray-bossa" data-busca="tanqueray bossa nova gelo de coco + energetico  red bull bally">
+<div class="item-icone"><svg aria-hidden="true"><use href="#i-gin"/></svg></div>
+<div class="item-txt">
+<h3 class="item-nome">Tanqueray Bossa Nova</h3>
+<p class="item-sub"><span class="item-det">gelo de coco + energético</span><span class="item-linha-preco"><span class="preco">R$ 180,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 180,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="gin-tanqueray-bossa" aria-label="Adicionar Tanqueray Bossa Nova, gelo de coco + energético"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-gin-tanqueray" data-id="gin-tanqueray" data-busca="tanqueray tradicional gelo de coco + energetico  red bull bally">
+<div class="item-icone"><img src="assets/img/loja/prime-tanqueray.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Tanqueray Tradicional</h3>
+<p class="item-sub"><span class="item-det">gelo de coco + energético</span><span class="item-linha-preco"><span class="preco">R$ 170,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 170,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="gin-tanqueray" aria-label="Adicionar Tanqueray Tradicional, gelo de coco + energético"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-gin-bombay" data-id="gin-bombay" data-busca="bombay gelo de coco + energetico  red bull bally">
+<div class="item-icone"><img src="assets/img/loja/prime-combo-bombay.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Bombay</h3>
+<p class="item-sub"><span class="item-det">gelo de coco + energético</span><span class="item-linha-preco"><span class="preco">R$ 150,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 150,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="gin-bombay" aria-label="Adicionar Bombay, gelo de coco + energético"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-gin-beefeater-pink" data-id="gin-beefeater-pink" data-busca="beefeater pink gelo de coco + energetico  red bull bally">
+<div class="item-icone"><img src="assets/img/loja/prime-beefeater-pink.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Beefeater Pink</h3>
+<p class="item-sub"><span class="item-det">gelo de coco + energético</span><span class="item-linha-preco"><span class="preco">R$ 160,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 160,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="gin-beefeater-pink" aria-label="Adicionar Beefeater Pink, gelo de coco + energético"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-gin-beefeater" data-id="gin-beefeater" data-busca="beefeater tradicional gelo de coco + energetico  red bull bally">
+<div class="item-icone"><img src="assets/img/loja/prime-combo-beefeater.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Beefeater Tradicional</h3>
+<p class="item-sub"><span class="item-det">gelo de coco + energético</span><span class="item-linha-preco"><span class="preco">R$ 140,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 140,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="gin-beefeater" aria-label="Adicionar Beefeater Tradicional, gelo de coco + energético"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-gin-gordons-pink" data-id="gin-gordons-pink" data-busca="gordon&#39;s pink gelo de coco + energetico  red bull bally">
+<div class="item-icone"><img src="assets/img/loja/prime-gordons-pink.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Gordon&#39;s Pink</h3>
+<p class="item-sub"><span class="item-det">gelo de coco + energético</span><span class="item-linha-preco"><span class="preco">R$ 140,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 140,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="gin-gordons-pink" aria-label="Adicionar Gordon&#39;s Pink, gelo de coco + energético"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-gin-gordons" data-id="gin-gordons" data-busca="gordon&#39;s tradicional gelo de coco + energetico  red bull bally">
+<div class="item-icone"><img src="assets/img/loja/prime-gordons.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Gordon&#39;s Tradicional</h3>
+<p class="item-sub"><span class="item-det">gelo de coco + energético</span><span class="item-linha-preco"><span class="preco">R$ 130,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 130,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="gin-gordons" aria-label="Adicionar Gordon&#39;s Tradicional, gelo de coco + energético"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item" id="p-gin-rocks" data-id="gin-rocks" data-busca="rocks gelo de coco + energetico  red bull bally">
+<div class="item-icone"><svg aria-hidden="true"><use href="#i-gin"/></svg></div>
+<div class="item-txt">
+<h3 class="item-nome">Rocks <span class="selos"><span class="selo selo-mais-pedido"><svg aria-hidden="true"><use href="#i-fogo"/></svg>Mais pedido</span></span></h3>
+<p class="item-sub"><span class="item-det">gelo de coco + energético</span><span class="item-linha-preco"><span class="apartir">a partir de</span><span class="preco">R$ 70,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="apartir">a partir de</span><span class="preco">R$ 70,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="gin-rocks" aria-label="Adicionar Rocks, gelo de coco + energético"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item" id="p-gin-eternity-invictus" data-id="gin-eternity-invictus" data-busca="eternity / invictus gelo de coco + energetico  eternity invictus red bull bally">
+<div class="item-icone"><svg aria-hidden="true"><use href="#i-gin"/></svg></div>
+<div class="item-txt">
+<h3 class="item-nome">Eternity / Invictus</h3>
+<p class="item-sub"><span class="item-det">gelo de coco + energético</span><span class="item-linha-preco"><span class="apartir">a partir de</span><span class="preco">R$ 50,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="apartir">a partir de</span><span class="preco">R$ 50,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="gin-eternity-invictus" aria-label="Adicionar Eternity / Invictus, gelo de coco + energético"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article></div>
+</section><section class="secao" id="doses-whisky" aria-labelledby="t-doses-whisky" data-alcool="1">
+<div class="secao-topo">
+<h2 id="t-doses-whisky">Doses de Whisky</h2><span class="qtd">9 itens</span>
+<button type="button" class="btn-compartilhar" data-acao="compartilhar-cat" data-cat="doses-whisky" data-nome="Doses de Whisky" aria-label="Compartilhar Doses de Whisky"><svg aria-hidden="true"><use href="#i-compartilhar"/></svg></button>
+</div>
+<div class="itens"><article class="item" id="p-dose-chanceler" data-id="dose-chanceler" data-busca="chanceler dose">
+<div class="item-icone"><svg aria-hidden="true"><use href="#i-dose"/></svg></div>
+<div class="item-txt">
+<h3 class="item-nome">Chanceler</h3>
+<p class="item-sub"><span class="item-det">dose</span><span class="item-linha-preco"><span class="preco">R$ 12,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 12,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="dose-chanceler" aria-label="Adicionar Chanceler, dose"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-dose-cavalo-branco" data-id="dose-cavalo-branco" data-busca="cavalo branco dose com energetico  vibe red bull">
+<div class="item-icone"><img src="assets/img/loja/prime-white-horse.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Cavalo Branco</h3>
+<p class="item-sub"><span class="item-det">dose com energético</span><span class="item-linha-preco"><span class="apartir">a partir de</span><span class="preco">R$ 25,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="apartir">a partir de</span><span class="preco">R$ 25,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="dose-cavalo-branco" aria-label="Adicionar Cavalo Branco, dose com energético"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-dose-ballantines" data-id="dose-ballantines" data-busca="ballantine&#39;s dose com energetico  vibe red bull">
+<div class="item-icone"><img src="assets/img/loja/prime-ballantines.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Ballantine&#39;s</h3>
+<p class="item-sub"><span class="item-det">dose com energético</span><span class="item-linha-preco"><span class="apartir">a partir de</span><span class="preco">R$ 25,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="apartir">a partir de</span><span class="preco">R$ 25,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="dose-ballantines" aria-label="Adicionar Ballantine&#39;s, dose com energético"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-dose-red-label" data-id="dose-red-label" data-busca="red label dose com energetico  vibe red bull">
+<div class="item-icone"><img src="assets/img/loja/prime-red-label.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Red Label <span class="selos"><span class="selo selo-mais-pedido"><svg aria-hidden="true"><use href="#i-fogo"/></svg>Mais pedido</span></span></h3>
+<p class="item-sub"><span class="item-det">dose com energético</span><span class="item-linha-preco"><span class="apartir">a partir de</span><span class="preco">R$ 30,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="apartir">a partir de</span><span class="preco">R$ 30,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="dose-red-label" aria-label="Adicionar Red Label, dose com energético"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-dose-old-parr" data-id="dose-old-parr" data-busca="old parr dose">
+<div class="item-icone"><img src="assets/img/loja/prime-old-parr.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Old Parr</h3>
+<p class="item-sub"><span class="item-det">dose</span><span class="item-linha-preco"><span class="preco">R$ 40,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 40,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="dose-old-parr" aria-label="Adicionar Old Parr, dose"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-dose-jack" data-id="dose-jack" data-busca="jack daniel&#39;s dose">
+<div class="item-icone"><img src="assets/img/loja/prime-jack.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Jack Daniel&#39;s</h3>
+<p class="item-sub"><span class="item-det">dose</span><span class="item-linha-preco"><span class="preco">R$ 45,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 45,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="dose-jack" aria-label="Adicionar Jack Daniel&#39;s, dose"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item" id="p-dose-jack-sabores" data-id="dose-jack-sabores" data-busca="jack daniel&#39;s sabores dose · sabor a combinar no whatsapp">
+<div class="item-icone"><svg aria-hidden="true"><use href="#i-dose"/></svg></div>
+<div class="item-txt">
+<h3 class="item-nome">Jack Daniel&#39;s Sabores</h3>
+<p class="item-sub"><span class="item-det">dose · sabor a combinar no WhatsApp</span><span class="item-linha-preco"><span class="preco">R$ 50,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 50,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="dose-jack-sabores" aria-label="Adicionar Jack Daniel&#39;s Sabores, dose · sabor a combinar no WhatsApp"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-dose-black-label" data-id="dose-black-label" data-busca="black label dose">
+<div class="item-icone"><img src="assets/img/loja/prime-black-label.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Black Label</h3>
+<p class="item-sub"><span class="item-det">dose</span><span class="item-linha-preco"><span class="preco">R$ 50,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 50,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="dose-black-label" aria-label="Adicionar Black Label, dose"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-dose-buchanans" data-id="dose-buchanans" data-busca="buchanan&#39;s dose">
+<div class="item-icone"><img src="assets/img/loja/prime-buchanans.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Buchanan&#39;s</h3>
+<p class="item-sub"><span class="item-det">dose</span><span class="item-linha-preco"><span class="preco">R$ 50,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 50,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="dose-buchanans" aria-label="Adicionar Buchanan&#39;s, dose"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article></div>
+</section><section class="secao" id="narguile" aria-labelledby="t-narguile" data-alcool="1">
+<div class="secao-topo">
+<h2 id="t-narguile">Narguilé e Essências</h2><span class="qtd">8 itens</span>
+<button type="button" class="btn-compartilhar" data-acao="compartilhar-cat" data-cat="narguile" data-nome="Narguilé e Essências" aria-label="Compartilhar Narguilé e Essências"><svg aria-hidden="true"><use href="#i-compartilhar"/></svg></button>
+</div>
+<p class="secao-nota"><svg aria-hidden="true"><use href="#i-alerta"/></svg><span>Essências (escolha a marca e veja os sabores), carvão, rosh, abafador, alumínio e narguilé completo. Venda proibida para menores de 18 anos. O Ministério da Saúde adverte: fumar faz mal à saúde.</span></p>
+<div class="subabas" role="group" aria-label="Filtrar Narguilé e Essências">
+<button type="button" class="subaba" data-subaba="" aria-pressed="true">Todos</button>
+<button type="button" class="subaba" data-subaba="Essências" aria-pressed="false">Essências <span>3</span></button><button type="button" class="subaba" data-subaba="Acessórios" aria-pressed="false">Acessórios <span>2</span></button><button type="button" class="subaba" data-subaba="Narguilé" aria-pressed="false">Narguilé <span>3</span></button>
+</div>
+<div class="itens"><h3 class="subgrupo-titulo" data-subgrupo="Essências">Essências</h3><article class="item com-foto" id="p-essencia-ziggy-pink-lemonade" data-id="essencia-ziggy-pink-lemonade" data-busca="ziggy pink lemonade essencia · pacote 50 g narguile rosh ziggy limonada tabaco essencia" data-subgrupo="Essências">
+<div class="item-icone"><img src="assets/img/loja/ziggy-pink-lemonade.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Ziggy Pink Lemonade <span class="selos"><span class="selo selo-novidade"><svg aria-hidden="true"><use href="#i-estrela"/></svg>Novidade</span></span></h3>
+<p class="item-sub"><span class="item-det">essência · pacote 50 g</span><span class="item-linha-preco"><span class="preco">R$ 18,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 18,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="essencia-ziggy-pink-lemonade" aria-label="Adicionar Ziggy Pink Lemonade, essência · pacote 50 g"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-essencia-ziggy" data-id="essencia-ziggy" data-busca="essencia ziggy pacote 50 g · escolha o sabor narguile rosh ziggy tabaco essencia pink lemonade abacaxi tropical acai banana tropical coco tropical cereja grape starburst happy berry happy frutti laranjola tropical limao manga tropical maracuja menta red lemonade sorvete de pistache tanger bomb tropical watermelon bomb yogurt" data-subgrupo="Essências">
+<div class="item-icone"><img src="assets/img/loja/ziggy.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Essência Ziggy</h3>
+<p class="item-sub"><span class="item-det">pacote 50 g · escolha o sabor</span><span class="item-linha-preco"><span class="preco">R$ 18,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 18,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="essencia-ziggy" aria-label="Adicionar Essência Ziggy, pacote 50 g · escolha o sabor"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-essencia-onix" data-id="essencia-onix" data-busca="essencia onix pacote 50 g · escolha o sabor narguile rosh onix tabaco essencia coke drops kiwi drops purple drops red drops goiaba e morango melao" data-subgrupo="Essências">
+<div class="item-icone"><img src="assets/img/loja/onix.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Essência Onix</h3>
+<p class="item-sub"><span class="item-det">pacote 50 g · escolha o sabor</span><span class="item-linha-preco"><span class="preco">R$ 15,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 15,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="essencia-onix" aria-label="Adicionar Essência Onix, pacote 50 g · escolha o sabor"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><h3 class="subgrupo-titulo" data-subgrupo="Acessórios">Acessórios</h3><article class="item com-foto" id="p-carvao-narguile" data-id="carvao-narguile" data-busca="carvao para narguile carvao de coco hexagonal · unidade ou caixa carvao coco unidade caixa" data-subgrupo="Acessórios">
+<div class="item-icone"><img src="assets/img/loja/carvao.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Carvão para narguilé</h3>
+<p class="item-sub"><span class="item-det">carvão de coco hexagonal · unidade ou caixa</span><span class="item-linha-preco"><span class="apartir">a partir de</span><span class="preco">R$ 1,50</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="apartir">a partir de</span><span class="preco">R$ 1,50</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="carvao-narguile" aria-label="Adicionar Carvão para narguilé, carvão de coco hexagonal · unidade ou caixa"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-aluminio-narguile" data-id="aluminio-narguile" data-busca="papel aluminio para narguile rolo aluminio papel" data-subgrupo="Acessórios">
+<div class="item-icone"><img src="assets/img/loja/aluminio.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Papel alumínio para narguilé</h3>
+<p class="item-sub"><span class="item-det">rolo</span><span class="item-linha-preco"><span class="preco">R$ 8,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 8,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="aluminio-narguile" aria-label="Adicionar Papel alumínio para narguilé, rolo"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><h3 class="subgrupo-titulo" data-subgrupo="Narguilé">Narguilé</h3><article class="item com-foto" id="p-narguile-completo" data-id="narguile-completo" data-busca="narguile completo vaso, stem, mangueira, rosh e prato narguile kit" data-subgrupo="Narguilé">
+<div class="item-icone"><img src="assets/img/loja/narguile-completo.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Narguilé completo</h3>
+<p class="item-sub"><span class="item-det">vaso, stem, mangueira, rosh e prato</span><span class="item-linha-preco"><span class="preco">R$ 120,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 120,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="narguile-completo" aria-label="Adicionar Narguilé completo, vaso, stem, mangueira, rosh e prato"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-rosh" data-id="rosh" data-busca="rosh ceramica rosh fornilho" data-subgrupo="Narguilé">
+<div class="item-icone"><img src="assets/img/loja/rosh.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Rosh</h3>
+<p class="item-sub"><span class="item-det">cerâmica</span><span class="item-linha-preco"><span class="preco">R$ 25,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 25,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="rosh" aria-label="Adicionar Rosh, cerâmica"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-abafador" data-id="abafador" data-busca="abafador para rosh abafador tampa" data-subgrupo="Narguilé">
+<div class="item-icone"><img src="assets/img/loja/abafador.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Abafador</h3>
+<p class="item-sub"><span class="item-det">para rosh</span><span class="item-linha-preco"><span class="preco">R$ 15,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 15,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="abafador" aria-label="Adicionar Abafador, para rosh"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article></div>
+</section><section class="secao" id="cigarros" aria-labelledby="t-cigarros" data-alcool="1">
+<div class="secao-topo">
+<h2 id="t-cigarros">Cigarros</h2><span class="qtd">4 itens</span>
+<button type="button" class="btn-compartilhar" data-acao="compartilhar-cat" data-cat="cigarros" data-nome="Cigarros" aria-label="Compartilhar Cigarros"><svg aria-hidden="true"><use href="#i-compartilhar"/></svg></button>
+</div>
+<p class="secao-nota"><svg aria-hidden="true"><use href="#i-alerta"/></svg><span>Venda proibida para menores de 18 anos. O Ministério da Saúde adverte: fumar causa câncer de pulmão.</span></p>
+<div class="itens"><article class="item" id="p-cig-marlboro" data-id="cig-marlboro" data-busca="marlboro maco com 20 cigarro">
+<div class="item-icone"><svg aria-hidden="true"><use href="#i-cigarro"/></svg></div>
+<div class="item-txt">
+<h3 class="item-nome">Marlboro</h3>
+<p class="item-sub"><span class="item-det">maço com 20</span><span class="item-linha-preco"><span class="preco">R$ 13,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 13,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="cig-marlboro" aria-label="Adicionar Marlboro, maço com 20"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item" id="p-cig-lucky-strike" data-id="cig-lucky-strike" data-busca="lucky strike maco com 20 cigarro">
+<div class="item-icone"><svg aria-hidden="true"><use href="#i-cigarro"/></svg></div>
+<div class="item-txt">
+<h3 class="item-nome">Lucky Strike</h3>
+<p class="item-sub"><span class="item-det">maço com 20</span><span class="item-linha-preco"><span class="preco">R$ 12,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 12,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="cig-lucky-strike" aria-label="Adicionar Lucky Strike, maço com 20"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item" id="p-cig-dunhill" data-id="cig-dunhill" data-busca="dunhill maco com 20 cigarro">
+<div class="item-icone"><svg aria-hidden="true"><use href="#i-cigarro"/></svg></div>
+<div class="item-txt">
+<h3 class="item-nome">Dunhill</h3>
+<p class="item-sub"><span class="item-det">maço com 20</span><span class="item-linha-preco"><span class="preco">R$ 13,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 13,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="cig-dunhill" aria-label="Adicionar Dunhill, maço com 20"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item" id="p-cig-rothmans" data-id="cig-rothmans" data-busca="rothmans maco com 20 cigarro">
+<div class="item-icone"><svg aria-hidden="true"><use href="#i-cigarro"/></svg></div>
+<div class="item-txt">
+<h3 class="item-nome">Rothmans</h3>
+<p class="item-sub"><span class="item-det">maço com 20</span><span class="item-linha-preco"><span class="preco">R$ 10,50</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 10,50</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="cig-rothmans" aria-label="Adicionar Rothmans, maço com 20"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article></div>
+</section><section class="secao" id="refrigerantes" aria-labelledby="t-refrigerantes">
+<div class="secao-topo">
+<h2 id="t-refrigerantes">Refrigerantes</h2><span class="qtd">7 itens</span>
+<button type="button" class="btn-compartilhar" data-acao="compartilhar-cat" data-cat="refrigerantes" data-nome="Refrigerantes" aria-label="Compartilhar Refrigerantes"><svg aria-hidden="true"><use href="#i-compartilhar"/></svg></button>
+</div>
+<div class="itens"><article class="item com-foto" id="p-refri-lata" data-id="refri-lata" data-busca="refrigerante lata 350 ml · escolha o sabor coca fanta sprite guarana coca-cola coca-cola zero guarana antarctica sprite fanta laranja fanta uva">
+<div class="item-icone"><img src="assets/img/produtos/coca-lata.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Refrigerante lata</h3>
+<p class="item-sub"><span class="item-det">350 ml · escolha o sabor</span><span class="item-linha-preco"><span class="preco">R$ 5,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 5,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="refri-lata" aria-label="Adicionar Refrigerante lata, 350 ml · escolha o sabor"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-schweppes-lata" data-id="schweppes-lata" data-busca="schweppes citrus lata 350 ml">
+<div class="item-icone"><img src="assets/img/loja/prime-schweppes.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Schweppes Citrus</h3>
+<p class="item-sub"><span class="item-det">lata 350 ml</span><span class="item-linha-preco"><span class="preco">R$ 6,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 6,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="schweppes-lata" aria-label="Adicionar Schweppes Citrus, lata 350 ml"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item" id="p-coca-2l" data-id="coca-2l" data-busca="coca-cola 2 l garrafa 2 litros">
+<div class="item-icone"><svg aria-hidden="true"><use href="#i-refri"/></svg></div>
+<div class="item-txt">
+<h3 class="item-nome">Coca-Cola 2 L</h3>
+<p class="item-sub"><span class="item-det">garrafa 2 litros</span><span class="item-linha-preco"><span class="preco">R$ 15,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 15,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="coca-2l" aria-label="Adicionar Coca-Cola 2 L, garrafa 2 litros"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item" id="p-coca-zero-2l" data-id="coca-zero-2l" data-busca="coca-cola zero acucar 2 l garrafa 2 litros">
+<div class="item-icone"><svg aria-hidden="true"><use href="#i-refri"/></svg></div>
+<div class="item-txt">
+<h3 class="item-nome">Coca-Cola Zero Açúcar 2 L</h3>
+<p class="item-sub"><span class="item-det">garrafa 2 litros</span><span class="item-linha-preco"><span class="preco">R$ 16,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 16,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="coca-zero-2l" aria-label="Adicionar Coca-Cola Zero Açúcar 2 L, garrafa 2 litros"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item" id="p-fanta-2l" data-id="fanta-2l" data-busca="fanta 2 l laranja ou uva  laranja uva">
+<div class="item-icone"><svg aria-hidden="true"><use href="#i-refri"/></svg></div>
+<div class="item-txt">
+<h3 class="item-nome">Fanta 2 L</h3>
+<p class="item-sub"><span class="item-det">Laranja ou Uva</span><span class="item-linha-preco"><span class="preco">R$ 14,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 14,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="fanta-2l" aria-label="Adicionar Fanta 2 L, Laranja ou Uva"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item" id="p-sprite-guarana-2l" data-id="sprite-guarana-2l" data-busca="sprite ou guarana antarctica 2 l garrafa 2 litros  sprite guarana antarctica">
+<div class="item-icone"><svg aria-hidden="true"><use href="#i-refri"/></svg></div>
+<div class="item-txt">
+<h3 class="item-nome">Sprite ou Guaraná Antarctica 2 L</h3>
+<p class="item-sub"><span class="item-det">garrafa 2 litros</span><span class="item-linha-preco"><span class="preco">R$ 14,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 14,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="sprite-guarana-2l" aria-label="Adicionar Sprite ou Guaraná Antarctica 2 L, garrafa 2 litros"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item" id="p-dolly-2l" data-id="dolly-2l" data-busca="dolly 2 l limao, guarana ou laranja  limao guarana laranja">
+<div class="item-icone"><svg aria-hidden="true"><use href="#i-refri"/></svg></div>
+<div class="item-txt">
+<h3 class="item-nome">Dolly 2 L</h3>
+<p class="item-sub"><span class="item-det">Limão, Guaraná ou Laranja</span><span class="item-linha-preco"><span class="preco">R$ 9,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 9,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="dolly-2l" aria-label="Adicionar Dolly 2 L, Limão, Guaraná ou Laranja"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article></div>
+</section><section class="secao" id="agua" aria-labelledby="t-agua">
+<div class="secao-topo">
+<h2 id="t-agua">Águas e sem álcool</h2><span class="qtd">3 itens</span>
+<button type="button" class="btn-compartilhar" data-acao="compartilhar-cat" data-cat="agua" data-nome="Águas e sem álcool" aria-label="Compartilhar Águas e sem álcool"><svg aria-hidden="true"><use href="#i-compartilhar"/></svg></button>
+</div>
+<div class="itens"><article class="item com-foto" id="p-agua-sem-gas" data-id="agua-sem-gas" data-busca="agua mineral sem gas garrafa 500 ml agua">
+<div class="item-icone"><img src="assets/img/produtos/agua.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Água mineral sem gás</h3>
+<p class="item-sub"><span class="item-det">garrafa 500 ml</span><span class="item-linha-preco"><span class="preco">R$ 3,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 3,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="agua-sem-gas" aria-label="Adicionar Água mineral sem gás, garrafa 500 ml"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-agua-com-gas" data-id="agua-com-gas" data-busca="agua mineral com gas garrafa 500 ml agua gaseificada">
+<div class="item-icone"><img src="assets/img/produtos/agua-gas.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Água mineral com gás</h3>
+<p class="item-sub"><span class="item-det">garrafa 500 ml</span><span class="item-linha-preco"><span class="preco">R$ 4,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 4,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="agua-com-gas" aria-label="Adicionar Água mineral com gás, garrafa 500 ml"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item" id="p-agua-galao-5l" data-id="agua-galao-5l" data-busca="garrafao de agua mineral 5 l galao 5 litros agua galao garrafao">
+<div class="item-icone"><svg aria-hidden="true"><use href="#i-refri"/></svg></div>
+<div class="item-txt">
+<h3 class="item-nome">Garrafão de água mineral 5 L</h3>
+<p class="item-sub"><span class="item-det">galão 5 litros</span><span class="item-linha-preco"><span class="preco">R$ 12,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 12,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="agua-galao-5l" aria-label="Adicionar Garrafão de água mineral 5 L, galão 5 litros"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article></div>
+</section><section class="secao" id="mercearia" aria-labelledby="t-mercearia">
+<div class="secao-topo">
+<h2 id="t-mercearia">Mercearia</h2><span class="qtd">2 itens</span>
+<button type="button" class="btn-compartilhar" data-acao="compartilhar-cat" data-cat="mercearia" data-nome="Mercearia" aria-label="Compartilhar Mercearia"><svg aria-hidden="true"><use href="#i-compartilhar"/></svg></button>
+</div>
+<div class="itens"><article class="item com-foto" id="p-salgadinho" data-id="salgadinho" data-busca="salgadinho pacote · consulte os sabores snack batata chips">
+<div class="item-icone"><img src="assets/img/produtos/salgadinho.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Salgadinho</h3>
+<p class="item-sub"><span class="item-det">pacote · consulte os sabores</span><span class="item-linha-preco"><span class="preco">R$ 8,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 8,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="salgadinho" aria-label="Adicionar Salgadinho, pacote · consulte os sabores"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article><article class="item com-foto" id="p-chocolate" data-id="chocolate" data-busca="chocolate barra · consulte as marcas doce barra">
+<div class="item-icone"><img src="assets/img/produtos/chocolate.webp" alt="" width="44" height="44" loading="lazy" decoding="async"></div>
+<div class="item-txt">
+<h3 class="item-nome">Chocolate</h3>
+<p class="item-sub"><span class="item-det">barra · consulte as marcas</span><span class="item-linha-preco"><span class="preco">R$ 7,00</span></span></p>
+</div>
+<div class="item-preco-grade" aria-hidden="true"><span class="preco">R$ 7,00</span></div>
+<div class="item-acao"><button type="button" class="btn-mais" data-acao="mais" data-id="chocolate" aria-label="Adicionar Chocolate, barra · consulte as marcas"><svg aria-hidden="true"><use href="#i-mais"/></svg></button></div>
+</article></div>
+</section>
+<!--/CATALOGO-LISTA--></div>
+      <p class="vazio-busca" id="vazio-busca" hidden>
+        Não achamos esse item. <a id="vazio-wpp" href="https://wa.me/5511915817410" target="_blank" rel="noopener">Pergunte no WhatsApp</a>: pode ser que tenha na adega.
+      </p>
+
+      <section class="info" aria-labelledby="info-titulo">
+        <h2 id="info-titulo">Adega KM28</h2>
+        <p class="frase">Cerveja trincando e destilados de qualidade. <b>Aqui tem cerveja gelada!</b></p>
+        <ul class="info-lista">
+          <li><svg aria-hidden="true"><use href="#i-pino"/></svg><span>Rua Frei Amador Arrais, 58 · Jardim São Rafael · São Paulo/SP</span></li>
+          <li><svg aria-hidden="true"><use href="#i-relogio"/></svg><span>Seg a qua: 09h às 23h<br>Qui a dom: 11h às 02h</span></li>
+          <li><svg aria-hidden="true"><use href="#i-whatsapp"/></svg><a href="https://wa.me/5511915817410" target="_blank" rel="noopener">(11) 91581-7410</a></li>
+          <li><svg aria-hidden="true"><use href="#i-instagram"/></svg><a href="https://www.instagram.com/adegakm28" target="_blank" rel="noopener">@adegakm28</a></li>
+        </ul>
+        <div class="info-acoes">
+          <button type="button" class="btn-sec" id="instalar" hidden>
+            <svg aria-hidden="true"><use href="#i-baixar"/></svg> Adicionar à tela inicial
+          </button>
+          <button type="button" class="btn-sec" id="compartilhar-site">
+            <svg aria-hidden="true"><use href="#i-compartilhar"/></svg> Compartilhar cardápio
+          </button>
+        </div>
+        <p class="privacidade"><b>Privacidade:</b> seus dados ficam só neste aparelho. Nada é enviado para servidor nenhum; o pedido sai apenas pela mensagem que você mesmo envia no WhatsApp. O CEP é consultado no ViaCEP só para preencher o endereço.</p>
+        <details class="creditos" id="creditos">
+          <summary>Imagens ilustrativas · créditos das fotos</summary>
+          <ul id="creditos-lista"><li>Carregando…</li></ul>
+        </details>
+        <p class="origem" id="origem"></p>
+      </section>
+    </main>
+
+    <aside class="coluna-carrinho" id="carrinho-lateral" aria-label="Seu pedido"></aside>
+  </div>
+
+  <div class="barra-carrinho" id="barra-carrinho" hidden>
+    <button type="button" id="abrir-carrinho">
+      <span class="barra-icone"><svg aria-hidden="true"><use href="#i-sacola"/></svg><span class="badge" id="barra-qtd">0</span></span>
+      <span class="barra-txt" id="barra-txt">0 itens · R$ 0,00</span>
+      <span class="barra-ver">Ver pedido <svg aria-hidden="true"><use href="#i-seta"/></svg></span>
+    </button>
+  </div>
+
+  <footer class="legal">
+    <p>Venda proibida para menores de 18 anos · Beba com moderação · Se beber, não dirija.</p>
+  </footer>
+
+  <!-- Portão de idade -->
+  <dialog id="dlg-idade" class="modal" aria-labelledby="idade-titulo" aria-describedby="idade-desc">
+    <div class="modal-corpo idade">
+      <img src="assets/icons/selo-96.png" width="72" height="72" alt="">
+      <h2 id="idade-titulo">Você tem 18 anos ou mais?</h2>
+      <p id="idade-desc">Este cardápio contém bebidas alcoólicas.</p>
+      <div class="idade-botoes">
+        <button type="button" class="btn-pri" id="idade-sim">Sim, tenho 18+</button>
+        <button type="button" class="btn-sec" id="idade-nao">Não</button>
+      </div>
+      <p class="idade-rodape">Venda proibida para menores de 18 anos.</p>
+    </div>
+  </dialog>
+
+  <!-- Produto com opções -->
+  <dialog id="dlg-produto" class="sheet" aria-labelledby="produto-titulo">
+    <form method="dialog" class="sheet-corpo" id="form-produto" novalidate></form>
+  </dialog>
+
+  <!-- Carrinho (celular) -->
+  <dialog id="dlg-carrinho" class="sheet sheet-alto" aria-label="Seu pedido">
+    <div class="sheet-corpo" id="carrinho-gaveta"></div>
+  </dialog>
+
+  <!-- Finalização -->
+  <dialog id="dlg-checkout" class="tela" aria-labelledby="checkout-titulo">
+    <form id="form-checkout" class="tela-corpo" novalidate></form>
+  </dialog>
+
+  <!-- Pedido enviado -->
+  <dialog id="dlg-enviado" class="tela" aria-labelledby="enviado-titulo">
+    <div class="tela-corpo" id="enviado"></div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="sprite" aria-hidden="true">
+    <defs>
+      <symbol id="i-lata" viewBox="0 0 24 24"><path d="M7.5 3.5h9l1 2v13l-1 2h-9l-1-2v-13z"/><path d="M6.5 8h11M6.5 16h11"/><path d="M10 11.5h4"/></symbol>
+      <symbol id="i-longneck" viewBox="0 0 24 24"><path d="M10.5 2h3v4.5l1.8 3.2V21a1 1 0 0 1-1 1H9.7a1 1 0 0 1-1-1V9.7l1.8-3.2z"/><path d="M8.7 13h6.6M8.7 18h6.6"/></symbol>
+      <symbol id="i-gin" viewBox="0 0 24 24"><path d="M5.5 3h13c0 6.2-2.8 9.5-6.5 9.5S5.5 9.2 5.5 3z"/><path d="M12 12.5V20M8 21h8"/><path d="M6 6.5h12"/><circle cx="14" cy="8.5" r=".9"/></symbol>
+      <symbol id="i-dose" viewBox="0 0 24 24"><path d="M5 5h14l-1.4 15H6.4z"/><rect x="8" y="11" width="4" height="4" rx=".6"/><rect x="12.6" y="9.2" width="3.4" height="3.4" rx=".6"/><path d="M5.6 9h12.8"/></symbol>
+      <symbol id="i-garrafa" viewBox="0 0 24 24"><path d="M10.2 2h3.6v3.2c2.2.6 3.2 2.1 3.2 4.2V21a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V9.4c0-2.1 1-3.6 3.2-4.2z"/><rect x="8.8" y="12" width="6.4" height="5.4" rx=".6"/></symbol>
+      <symbol id="i-refri" viewBox="0 0 24 24"><path d="M10.4 2h3.2v2.2c1.6 1 2.6 2.6 2.6 4.6V20a2 2 0 0 1-2 2H9.8a2 2 0 0 1-2-2V8.8c0-2 1-3.6 2.6-4.6z"/><path d="M7.8 12h8.4M7.8 16.5h8.4"/></symbol>
+      <symbol id="i-gelo" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></symbol>
+      <symbol id="i-petisco" viewBox="0 0 24 24"><path d="M3 11h18a9 9 0 0 1-18 0z"/><circle cx="9" cy="7.5" r="2"/><circle cx="14.5" cy="6.5" r="2"/></symbol>
+      <symbol id="i-mais" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="i-menos" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+      <symbol id="i-fechar" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+      <symbol id="i-voltar" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+      <symbol id="i-seta" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-busca" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></symbol>
+      <symbol id="i-grade" viewBox="0 0 24 24"><rect x="4" y="4" width="6.5" height="6.5" rx="1.2"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.2"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.2"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.2"/></symbol>
+      <symbol id="i-lista" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.8" cy="6" r="1"/><circle cx="4.8" cy="12" r="1"/><circle cx="4.8" cy="18" r="1"/></symbol>
+      <symbol id="i-sacola" viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8z"/><path d="M9 10V6.5a3 3 0 0 1 6 0V10"/></symbol>
+      <symbol id="i-lixo" viewBox="0 0 24 24"><path d="M4.5 7h15M9.5 7V4.5h5V7M6.5 7l1 13h9l1-13"/><path d="M10.5 11v5.5M13.5 11v5.5"/></symbol>
+      <symbol id="i-compartilhar" viewBox="0 0 24 24"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="M8.2 10.8l7.6-4.1M8.2 13.2l7.6 4.1"/></symbol>
+      <symbol id="i-copiar" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="11" height="11" rx="2"/><path d="M15.5 8.5V6a1.5 1.5 0 0 0-1.5-1.5H6A1.5 1.5 0 0 0 4.5 6v8A1.5 1.5 0 0 0 6 15.5h2.5"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+      <symbol id="i-relogio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+      <symbol id="i-pino" viewBox="0 0 24 24"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+      <symbol id="i-megafone" viewBox="0 0 24 24"><path d="M4 10v4h3l8 4.5v-13L7 10z"/><path d="M7 14l1.2 5H11l-1-4.2M18 9.5a3.5 3.5 0 0 1 0 5"/></symbol>
+      <symbol id="i-repetir" viewBox="0 0 24 24"><path d="M4.5 12a7.5 7.5 0 0 1 13-5.1L19.5 9M19.5 4.5V9H15M19.5 12a7.5 7.5 0 0 1-13 5.1L4.5 15M4.5 19.5V15H9"/></symbol>
+      <symbol id="i-baixar" viewBox="0 0 24 24"><path d="M12 4v11M7 10.5l5 5 5-5M5 19.5h14"/></symbol>
+      <symbol id="i-alerta" viewBox="0 0 24 24"><path d="M12 3.5L21.5 20h-19z"/><path d="M12 10v4.5M12 17.2v.3"/></symbol>
+      <symbol id="i-pix" viewBox="0 0 24 24"><path d="M12 2.8l3.6 3.6-2.1 2.1a2.1 2.1 0 0 1-3 0L8.4 6.4zM12 21.2l-3.6-3.6 2.1-2.1a2.1 2.1 0 0 1 3 0l2.1 2.1zM2.8 12l3.6-3.6 2.1 2.1a2.1 2.1 0 0 1 0 3l-2.1 2.1zM21.2 12l-3.6 3.6-2.1-2.1a2.1 2.1 0 0 1 0-3l2.1-2.1z"/></symbol>
+      <symbol id="i-narguile" viewBox="0 0 24 24"><path d="M10 3h4l-.6 2.5h-2.8z"/><path d="M12 5.5v6"/><path d="M8.5 11.5h7l-1 2h-5z"/><path d="M9.5 13.5c-2.2 1-3.5 2.6-3.5 4.3C6 20.1 8.7 21.5 12 21.5s6-1.4 6-3.7c0-1.7-1.3-3.3-3.5-4.3"/><path d="M15.5 9c2.5 0 4 1.2 4.5 3.5"/></symbol>
+      <symbol id="i-cigarro" viewBox="0 0 24 24"><rect x="2.5" y="13" width="16" height="4" rx="1"/><path d="M14.5 13v4"/><path d="M20.5 13v4M22 13v4"/><path d="M17 10c0-1.5 1-2 1-3.5S17 4 17 3M20 10c0-1.5 1-2 1-3.5"/></symbol>
+      <symbol id="i-estrela" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z"/></symbol>
+      <symbol id="i-fogo" viewBox="0 0 24 24"><path d="M12 21.5c-3.9 0-6.5-2.6-6.5-6.2 0-3.4 2.5-5.4 3.6-8.3.3 1.9 1.3 3.1 2.4 3.6.1-3 1.5-5.7 3.8-7.6-.2 3.2 1.4 5.3 2.7 7.2.9 1.4 1.5 2.9 1.5 5 0 3.6-2.7 6.3-7.5 6.3z"/><path d="M12 21.5c-1.7 0-2.9-1.2-2.9-2.8 0-1.8 1.6-2.7 2.2-4.3.9.9 3.6 2.2 3.6 4.3 0 1.6-1.2 2.8-2.9 2.8z"/></symbol>
+      <symbol id="i-etiqueta" viewBox="0 0 24 24"><path d="M3.5 12.6V4.5a1 1 0 0 1 1-1h8.1l8 8a1.5 1.5 0 0 1 0 2.1l-6.9 6.9a1.5 1.5 0 0 1-2.1 0z"/><circle cx="8.2" cy="8.2" r="1.4"/></symbol>
+      <symbol id="i-moto" viewBox="0 0 24 24"><circle cx="5.5" cy="16.5" r="3"/><circle cx="18.5" cy="16.5" r="3"/><path d="M8.5 16.5h5l3-6h-4.5M14.5 7h2.5l1.5 9.5M5.5 16.5l3-5h4"/></symbol>
+      <symbol id="i-cartao" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3 9.5h18M6.5 15h4"/></symbol>
+      <symbol id="i-dinheiro" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="1.5"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></symbol>
+      <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M4 20l1.2-4.1A8.3 8.3 0 1 1 8.4 19z"/><path d="M9 8.6c.2-.5.6-.6 1-.6l.6 1.5-.5.8c.5 1.2 1.6 2.3 2.8 2.8l.8-.5 1.5.6c0 .4-.1.8-.6 1-.9.5-2.3.1-3.7-1.1S8.6 9.6 9 8.6z"/></symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6"/></symbol>
+    </defs>
+  </svg>
+
+  <noscript><p class="noscript">Para montar o pedido, ative o JavaScript. Você também pode pedir direto pelo WhatsApp: <a href="https://wa.me/5511915817410">(11) 91581-7410</a>.</p></noscript>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

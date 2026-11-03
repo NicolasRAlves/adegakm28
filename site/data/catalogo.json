@@ -1,0 +1,1817 @@
+{
+  "atualizado": "2026-11-02",
+  "config": {
+    "chave_pix": "59614773000100",
+    "tipo_chave": "CNPJ",
+    "nome_recebedor": "KM28 COMERCIO DE BEBIDAS LTDA",
+    "cidade_pix": "SAO PAULO",
+    "banco": "",
+    "whatsapp": "5511915817410",
+    "taxa_entrega": "",
+    "pedido_minimo": "",
+    "aviso_do_dia": "",
+    "aberto_forcado": "auto",
+    "retirada": "SIM",
+    "pagamentos": "pix, credito, debito, dinheiro",
+    "sabores_red_bull": "Tradicional, Melancia, Tropical",
+    "sabores_bally": "Tradicional, Melancia, Tropical",
+    "sabores_vibe": "",
+    "mostrar_tabaco": "SIM"
+  },
+  "bairros": [
+    {
+      "bairro": "Jardim Guanabara",
+      "taxa": 400
+    },
+    {
+      "bairro": "Jardim São Rafael",
+      "taxa": 200
+    }
+  ],
+  "produtos": [
+    {
+      "id": "original-8",
+      "categoria": "cervejas",
+      "nome": "Antarctica Original",
+      "detalhe": "lata · pack com 8",
+      "preco": 3200,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 10,
+      "imagem": "assets/img/produtos/original.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "original-15",
+      "categoria": "cervejas",
+      "nome": "Antarctica Original",
+      "detalhe": "lata · pack com 15",
+      "preco": 5800,
+      "disponivel": true,
+      "destaque": "mais-pedido",
+      "ordem": 20,
+      "imagem": "assets/img/produtos/original.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "budweiser-8",
+      "categoria": "cervejas",
+      "nome": "Budweiser",
+      "detalhe": "lata · pack com 8",
+      "preco": 3200,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 30,
+      "imagem": "assets/img/produtos/budweiser.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "budweiser-15",
+      "categoria": "cervejas",
+      "nome": "Budweiser",
+      "detalhe": "lata · pack com 15",
+      "preco": 5800,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 40,
+      "imagem": "assets/img/produtos/budweiser.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "skol-15",
+      "categoria": "cervejas",
+      "nome": "Skol",
+      "detalhe": "lata · pack com 15",
+      "preco": 4300,
+      "disponivel": true,
+      "destaque": "promo",
+      "ordem": 50,
+      "imagem": "",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "amstel-12",
+      "categoria": "cervejas",
+      "nome": "Amstel",
+      "detalhe": "lata · pack com 12",
+      "preco": 3900,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 60,
+      "imagem": "assets/img/produtos/amstel.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "heineken-8",
+      "categoria": "cervejas",
+      "nome": "Heineken",
+      "detalhe": "lata · pack com 8",
+      "preco": 3800,
+      "disponivel": true,
+      "destaque": "mais-pedido",
+      "ordem": 70,
+      "imagem": "assets/img/produtos/heineken.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "heineken-zero-8",
+      "categoria": "cervejas",
+      "nome": "Heineken 0.0",
+      "detalhe": "lata · pack com 8",
+      "preco": 4000,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 80,
+      "imagem": "",
+      "tags": [
+        "sem-alcool"
+      ],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "petra-12",
+      "categoria": "cervejas",
+      "nome": "Petra",
+      "detalhe": "lata · pack com 12",
+      "preco": 3500,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 90,
+      "imagem": "",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "itaipava-12",
+      "categoria": "cervejas",
+      "nome": "Itaipava",
+      "detalhe": "lata · pack com 12",
+      "preco": 3200,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 100,
+      "imagem": "",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "spaten-8",
+      "categoria": "cervejas",
+      "nome": "Spaten",
+      "detalhe": "lata · pack com 8",
+      "preco": 3200,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 110,
+      "imagem": "assets/img/produtos/spaten.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "corona-ln-6",
+      "categoria": "cervejas",
+      "nome": "Corona",
+      "detalhe": "long neck · pack com 6",
+      "preco": 4800,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 120,
+      "imagem": "assets/img/produtos/corona.webp",
+      "tags": [
+        "long-neck"
+      ],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "heineken-ln-6",
+      "categoria": "cervejas",
+      "nome": "Heineken",
+      "detalhe": "long neck · pack com 6",
+      "preco": 4800,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 130,
+      "imagem": "assets/img/produtos/heineken-ln.webp",
+      "tags": [
+        "long-neck"
+      ],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "heineken-zero-ln-6",
+      "categoria": "cervejas",
+      "nome": "Heineken 0.0",
+      "detalhe": "long neck · pack com 6",
+      "preco": 5000,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 140,
+      "imagem": "",
+      "tags": [
+        "sem-alcool",
+        "long-neck"
+      ],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "cw-gold-label",
+      "categoria": "combos-whisky",
+      "nome": "Gold Label",
+      "detalhe": "garrafa + 4 Red Bull + gelo",
+      "preco": 29000,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 10,
+      "imagem": "assets/img/loja/prime-gold-label.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "cw-double-black",
+      "categoria": "combos-whisky",
+      "nome": "Double Black",
+      "detalhe": "garrafa + 4 Red Bull + gelo",
+      "preco": 27000,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 20,
+      "imagem": "assets/img/loja/prime-double-black.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "cw-black-label",
+      "categoria": "combos-whisky",
+      "nome": "Black Label",
+      "detalhe": "garrafa + 4 Red Bull + gelo",
+      "preco": 22000,
+      "disponivel": true,
+      "destaque": "mais-pedido",
+      "ordem": 30,
+      "imagem": "assets/img/loja/prime-black-label.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "cw-buchanans",
+      "categoria": "combos-whisky",
+      "nome": "Buchanan's",
+      "detalhe": "garrafa + 4 Red Bull + gelo",
+      "preco": 22000,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 40,
+      "imagem": "assets/img/loja/prime-combo-buchanans.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "cw-jack",
+      "categoria": "combos-whisky",
+      "nome": "Jack Daniel's",
+      "detalhe": "garrafa + 4 Red Bull + gelo",
+      "preco": 19000,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 50,
+      "imagem": "assets/img/loja/prime-jack.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "cw-jack-maca",
+      "categoria": "combos-whisky",
+      "nome": "Jack Daniel's Maçã Verde",
+      "detalhe": "garrafa + 4 Red Bull + gelo",
+      "preco": 23000,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 60,
+      "imagem": "assets/img/loja/prime-jack-apple.webp",
+      "tags": [
+        "apple"
+      ],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "cw-old-parr",
+      "categoria": "combos-whisky",
+      "nome": "Old Parr",
+      "detalhe": "garrafa + 4 Red Bull + gelo",
+      "preco": 19000,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 70,
+      "imagem": "assets/img/loja/prime-old-parr.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "cw-red-label",
+      "categoria": "combos-whisky",
+      "nome": "Red Label",
+      "detalhe": "garrafa + 4 Red Bull + gelo",
+      "preco": 14000,
+      "disponivel": true,
+      "destaque": "promo",
+      "ordem": 80,
+      "imagem": "assets/img/loja/prime-red-label.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "cw-cavalo-branco",
+      "categoria": "combos-whisky",
+      "nome": "Cavalo Branco",
+      "detalhe": "garrafa + 4 Red Bull + gelo",
+      "preco": 13000,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 90,
+      "imagem": "assets/img/loja/prime-combo-white-horse.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "cw-ballantines",
+      "categoria": "combos-whisky",
+      "nome": "Ballantine's",
+      "detalhe": "garrafa + 4 Red Bull + gelo",
+      "preco": 13000,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 100,
+      "imagem": "assets/img/loja/prime-ballantines.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "gin-tanqueray-bossa",
+      "categoria": "combos-gin",
+      "nome": "Tanqueray Bossa Nova",
+      "detalhe": "gelo de coco + energético",
+      "preco": 18000,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 10,
+      "imagem": "",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "gin-tanqueray",
+      "categoria": "combos-gin",
+      "nome": "Tanqueray Tradicional",
+      "detalhe": "gelo de coco + energético",
+      "preco": 17000,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 20,
+      "imagem": "assets/img/loja/prime-tanqueray.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "gin-bombay",
+      "categoria": "combos-gin",
+      "nome": "Bombay",
+      "detalhe": "gelo de coco + energético",
+      "preco": 15000,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 30,
+      "imagem": "assets/img/loja/prime-combo-bombay.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "gin-beefeater-pink",
+      "categoria": "combos-gin",
+      "nome": "Beefeater Pink",
+      "detalhe": "gelo de coco + energético",
+      "preco": 16000,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 40,
+      "imagem": "assets/img/loja/prime-beefeater-pink.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "gin-beefeater",
+      "categoria": "combos-gin",
+      "nome": "Beefeater Tradicional",
+      "detalhe": "gelo de coco + energético",
+      "preco": 14000,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 50,
+      "imagem": "assets/img/loja/prime-combo-beefeater.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "gin-gordons-pink",
+      "categoria": "combos-gin",
+      "nome": "Gordon's Pink",
+      "detalhe": "gelo de coco + energético",
+      "preco": 14000,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 60,
+      "imagem": "assets/img/loja/prime-gordons-pink.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "gin-gordons",
+      "categoria": "combos-gin",
+      "nome": "Gordon's Tradicional",
+      "detalhe": "gelo de coco + energético",
+      "preco": 13000,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 70,
+      "imagem": "assets/img/loja/prime-gordons.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "gin-rocks",
+      "categoria": "combos-gin",
+      "nome": "Rocks",
+      "detalhe": "gelo de coco + energético",
+      "preco": 7000,
+      "disponivel": true,
+      "destaque": "mais-pedido",
+      "ordem": 80,
+      "imagem": "",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "gin-eternity-invictus",
+      "categoria": "combos-gin",
+      "nome": "Eternity / Invictus",
+      "detalhe": "gelo de coco + energético",
+      "preco": 5000,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 90,
+      "imagem": "",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "dose-chanceler",
+      "categoria": "doses-whisky",
+      "nome": "Chanceler",
+      "detalhe": "dose",
+      "preco": 1200,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 10,
+      "imagem": "",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "dose-cavalo-branco",
+      "categoria": "doses-whisky",
+      "nome": "Cavalo Branco",
+      "detalhe": "dose com energético",
+      "preco": 2500,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 20,
+      "imagem": "assets/img/loja/prime-white-horse.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "dose-ballantines",
+      "categoria": "doses-whisky",
+      "nome": "Ballantine's",
+      "detalhe": "dose com energético",
+      "preco": 2500,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 30,
+      "imagem": "assets/img/loja/prime-ballantines.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "dose-red-label",
+      "categoria": "doses-whisky",
+      "nome": "Red Label",
+      "detalhe": "dose com energético",
+      "preco": 3000,
+      "disponivel": true,
+      "destaque": "mais-pedido",
+      "ordem": 40,
+      "imagem": "assets/img/loja/prime-red-label.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "dose-old-parr",
+      "categoria": "doses-whisky",
+      "nome": "Old Parr",
+      "detalhe": "dose",
+      "preco": 4000,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 50,
+      "imagem": "assets/img/loja/prime-old-parr.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "dose-jack",
+      "categoria": "doses-whisky",
+      "nome": "Jack Daniel's",
+      "detalhe": "dose",
+      "preco": 4500,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 60,
+      "imagem": "assets/img/loja/prime-jack.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "dose-jack-sabores",
+      "categoria": "doses-whisky",
+      "nome": "Jack Daniel's Sabores",
+      "detalhe": "dose · sabor a combinar no WhatsApp",
+      "preco": 5000,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 70,
+      "imagem": "",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "dose-black-label",
+      "categoria": "doses-whisky",
+      "nome": "Black Label",
+      "detalhe": "dose",
+      "preco": 5000,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 80,
+      "imagem": "assets/img/loja/prime-black-label.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "dose-buchanans",
+      "categoria": "doses-whisky",
+      "nome": "Buchanan's",
+      "detalhe": "dose",
+      "preco": 5000,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 90,
+      "imagem": "assets/img/loja/prime-buchanans.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "refri-lata",
+      "categoria": "refrigerantes",
+      "nome": "Refrigerante lata",
+      "detalhe": "350 ml · escolha o sabor",
+      "preco": 500,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 10,
+      "imagem": "assets/img/produtos/coca-lata.webp",
+      "tags": [
+        "coca",
+        "fanta",
+        "sprite",
+        "guarana"
+      ],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "schweppes-lata",
+      "categoria": "refrigerantes",
+      "nome": "Schweppes Citrus",
+      "detalhe": "lata 350 ml",
+      "preco": 600,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 20,
+      "imagem": "assets/img/loja/prime-schweppes.webp",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "coca-2l",
+      "categoria": "refrigerantes",
+      "nome": "Coca-Cola 2 L",
+      "detalhe": "garrafa 2 litros",
+      "preco": 1500,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 30,
+      "imagem": "",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "coca-zero-2l",
+      "categoria": "refrigerantes",
+      "nome": "Coca-Cola Zero Açúcar 2 L",
+      "detalhe": "garrafa 2 litros",
+      "preco": 1600,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 40,
+      "imagem": "",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "fanta-2l",
+      "categoria": "refrigerantes",
+      "nome": "Fanta 2 L",
+      "detalhe": "Laranja ou Uva",
+      "preco": 1400,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 50,
+      "imagem": "",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "sprite-guarana-2l",
+      "categoria": "refrigerantes",
+      "nome": "Sprite ou Guaraná Antarctica 2 L",
+      "detalhe": "garrafa 2 litros",
+      "preco": 1400,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 60,
+      "imagem": "",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "dolly-2l",
+      "categoria": "refrigerantes",
+      "nome": "Dolly 2 L",
+      "detalhe": "Limão, Guaraná ou Laranja",
+      "preco": 900,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 70,
+      "imagem": "",
+      "tags": [],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "essencia-ziggy",
+      "categoria": "narguile",
+      "nome": "Essência Ziggy",
+      "detalhe": "pacote 50 g · escolha o sabor",
+      "preco": 1800,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 2,
+      "imagem": "assets/img/loja/ziggy.webp",
+      "tags": [
+        "narguile",
+        "rosh",
+        "ziggy",
+        "tabaco",
+        "essencia"
+      ],
+      "somente_balcao": false,
+      "subgrupo": "Essências"
+    },
+    {
+      "id": "essencia-onix",
+      "categoria": "narguile",
+      "nome": "Essência Onix",
+      "detalhe": "pacote 50 g · escolha o sabor",
+      "preco": 1500,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 3,
+      "imagem": "assets/img/loja/onix.webp",
+      "tags": [
+        "narguile",
+        "rosh",
+        "onix",
+        "tabaco",
+        "essencia"
+      ],
+      "somente_balcao": false,
+      "subgrupo": "Essências"
+    },
+    {
+      "id": "agua-sem-gas",
+      "categoria": "agua",
+      "nome": "Água mineral sem gás",
+      "detalhe": "garrafa 500 ml",
+      "preco": 300,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 10,
+      "imagem": "assets/img/produtos/agua.webp",
+      "tags": [
+        "agua"
+      ],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "agua-com-gas",
+      "categoria": "agua",
+      "nome": "Água mineral com gás",
+      "detalhe": "garrafa 500 ml",
+      "preco": 400,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 20,
+      "imagem": "assets/img/produtos/agua-gas.webp",
+      "tags": [
+        "agua",
+        "gaseificada"
+      ],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "agua-galao-5l",
+      "categoria": "agua",
+      "nome": "Garrafão de água mineral 5 L",
+      "detalhe": "galão 5 litros",
+      "preco": 1200,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 30,
+      "imagem": "",
+      "tags": [
+        "agua",
+        "galao",
+        "garrafao"
+      ],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "salgadinho",
+      "categoria": "mercearia",
+      "nome": "Salgadinho",
+      "detalhe": "pacote · consulte os sabores",
+      "preco": 800,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 10,
+      "imagem": "assets/img/produtos/salgadinho.webp",
+      "tags": [
+        "snack",
+        "batata",
+        "chips"
+      ],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "chocolate",
+      "categoria": "mercearia",
+      "nome": "Chocolate",
+      "detalhe": "barra · consulte as marcas",
+      "preco": 700,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 20,
+      "imagem": "assets/img/produtos/chocolate.webp",
+      "tags": [
+        "doce",
+        "barra"
+      ],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "essencia-ziggy-pink-lemonade",
+      "categoria": "narguile",
+      "nome": "Ziggy Pink Lemonade",
+      "detalhe": "essência · pacote 50 g",
+      "preco": 1800,
+      "disponivel": true,
+      "destaque": "novidade",
+      "ordem": 1,
+      "imagem": "assets/img/loja/ziggy-pink-lemonade.webp",
+      "tags": [
+        "narguile",
+        "rosh",
+        "ziggy",
+        "limonada",
+        "tabaco",
+        "essencia"
+      ],
+      "somente_balcao": false,
+      "subgrupo": "Essências"
+    },
+    {
+      "id": "narguile-completo",
+      "categoria": "narguile",
+      "nome": "Narguilé completo",
+      "detalhe": "vaso, stem, mangueira, rosh e prato",
+      "preco": 12000,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 30,
+      "imagem": "assets/img/loja/narguile-completo.webp",
+      "tags": [
+        "narguile",
+        "kit"
+      ],
+      "somente_balcao": false,
+      "subgrupo": "Narguilé"
+    },
+    {
+      "id": "carvao-narguile",
+      "categoria": "narguile",
+      "nome": "Carvão para narguilé",
+      "detalhe": "carvão de coco hexagonal · unidade ou caixa",
+      "preco": 150,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 20,
+      "imagem": "assets/img/loja/carvao.webp",
+      "tags": [
+        "carvao",
+        "coco"
+      ],
+      "somente_balcao": false,
+      "subgrupo": "Acessórios"
+    },
+    {
+      "id": "rosh",
+      "categoria": "narguile",
+      "nome": "Rosh",
+      "detalhe": "cerâmica",
+      "preco": 2500,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 31,
+      "imagem": "assets/img/loja/rosh.webp",
+      "tags": [
+        "rosh",
+        "fornilho"
+      ],
+      "somente_balcao": false,
+      "subgrupo": "Narguilé"
+    },
+    {
+      "id": "abafador",
+      "categoria": "narguile",
+      "nome": "Abafador",
+      "detalhe": "para rosh",
+      "preco": 1500,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 32,
+      "imagem": "assets/img/loja/abafador.webp",
+      "tags": [
+        "abafador",
+        "tampa"
+      ],
+      "somente_balcao": false,
+      "subgrupo": "Narguilé"
+    },
+    {
+      "id": "aluminio-narguile",
+      "categoria": "narguile",
+      "nome": "Papel alumínio para narguilé",
+      "detalhe": "rolo",
+      "preco": 800,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 21,
+      "imagem": "assets/img/loja/aluminio.webp",
+      "tags": [
+        "aluminio",
+        "papel"
+      ],
+      "somente_balcao": false,
+      "subgrupo": "Acessórios"
+    },
+    {
+      "id": "cig-marlboro",
+      "categoria": "cigarros",
+      "nome": "Marlboro",
+      "detalhe": "maço com 20",
+      "preco": 1300,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 10,
+      "imagem": "",
+      "tags": [
+        "cigarro"
+      ],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "cig-lucky-strike",
+      "categoria": "cigarros",
+      "nome": "Lucky Strike",
+      "detalhe": "maço com 20",
+      "preco": 1200,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 20,
+      "imagem": "",
+      "tags": [
+        "cigarro"
+      ],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "cig-dunhill",
+      "categoria": "cigarros",
+      "nome": "Dunhill",
+      "detalhe": "maço com 20",
+      "preco": 1300,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 30,
+      "imagem": "",
+      "tags": [
+        "cigarro"
+      ],
+      "somente_balcao": false,
+      "subgrupo": ""
+    },
+    {
+      "id": "cig-rothmans",
+      "categoria": "cigarros",
+      "nome": "Rothmans",
+      "detalhe": "maço com 20",
+      "preco": 1050,
+      "disponivel": true,
+      "destaque": "",
+      "ordem": 40,
+      "imagem": "",
+      "tags": [
+        "cigarro"
+      ],
+      "somente_balcao": false,
+      "subgrupo": ""
+    }
+  ],
+  "variantes": [
+    {
+      "produto_id": "cw-gold-label",
+      "grupo": "Gelo",
+      "nome": "4 gelos de coco",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-gold-label",
+      "grupo": "Gelo",
+      "nome": "1 saco de gelo 5 kg",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-double-black",
+      "grupo": "Gelo",
+      "nome": "4 gelos de coco",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-double-black",
+      "grupo": "Gelo",
+      "nome": "1 saco de gelo 5 kg",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-black-label",
+      "grupo": "Gelo",
+      "nome": "4 gelos de coco",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-black-label",
+      "grupo": "Gelo",
+      "nome": "1 saco de gelo 5 kg",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-buchanans",
+      "grupo": "Gelo",
+      "nome": "4 gelos de coco",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-buchanans",
+      "grupo": "Gelo",
+      "nome": "1 saco de gelo 5 kg",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-jack",
+      "grupo": "Gelo",
+      "nome": "4 gelos de coco",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-jack",
+      "grupo": "Gelo",
+      "nome": "1 saco de gelo 5 kg",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-jack-maca",
+      "grupo": "Gelo",
+      "nome": "4 gelos de coco",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-jack-maca",
+      "grupo": "Gelo",
+      "nome": "1 saco de gelo 5 kg",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-old-parr",
+      "grupo": "Gelo",
+      "nome": "4 gelos de coco",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-old-parr",
+      "grupo": "Gelo",
+      "nome": "1 saco de gelo 5 kg",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-red-label",
+      "grupo": "Gelo",
+      "nome": "4 gelos de coco",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-red-label",
+      "grupo": "Gelo",
+      "nome": "1 saco de gelo 5 kg",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-cavalo-branco",
+      "grupo": "Gelo",
+      "nome": "4 gelos de coco",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-cavalo-branco",
+      "grupo": "Gelo",
+      "nome": "1 saco de gelo 5 kg",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-ballantines",
+      "grupo": "Gelo",
+      "nome": "4 gelos de coco",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-ballantines",
+      "grupo": "Gelo",
+      "nome": "1 saco de gelo 5 kg",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-gold-label",
+      "grupo": "Energético",
+      "nome": "Red Bull",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-double-black",
+      "grupo": "Energético",
+      "nome": "Red Bull",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-black-label",
+      "grupo": "Energético",
+      "nome": "Red Bull",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-buchanans",
+      "grupo": "Energético",
+      "nome": "Red Bull",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-jack",
+      "grupo": "Energético",
+      "nome": "Red Bull",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-jack-maca",
+      "grupo": "Energético",
+      "nome": "Red Bull",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-old-parr",
+      "grupo": "Energético",
+      "nome": "Red Bull",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-red-label",
+      "grupo": "Energético",
+      "nome": "Red Bull",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-cavalo-branco",
+      "grupo": "Energético",
+      "nome": "Red Bull",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "cw-ballantines",
+      "grupo": "Energético",
+      "nome": "Red Bull",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "gin-tanqueray-bossa",
+      "grupo": "Energético",
+      "nome": "Red Bull",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "gin-tanqueray-bossa",
+      "grupo": "Energético",
+      "nome": "Bally",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "gin-tanqueray",
+      "grupo": "Energético",
+      "nome": "Red Bull",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "gin-tanqueray",
+      "grupo": "Energético",
+      "nome": "Bally",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "gin-bombay",
+      "grupo": "Energético",
+      "nome": "Red Bull",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "gin-bombay",
+      "grupo": "Energético",
+      "nome": "Bally",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "gin-beefeater-pink",
+      "grupo": "Energético",
+      "nome": "Red Bull",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "gin-beefeater-pink",
+      "grupo": "Energético",
+      "nome": "Bally",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "gin-beefeater",
+      "grupo": "Energético",
+      "nome": "Red Bull",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "gin-beefeater",
+      "grupo": "Energético",
+      "nome": "Bally",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "gin-gordons-pink",
+      "grupo": "Energético",
+      "nome": "Red Bull",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "gin-gordons-pink",
+      "grupo": "Energético",
+      "nome": "Bally",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "gin-gordons",
+      "grupo": "Energético",
+      "nome": "Red Bull",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "gin-gordons",
+      "grupo": "Energético",
+      "nome": "Bally",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "gin-rocks",
+      "grupo": "Energético",
+      "nome": "Red Bull",
+      "preco": 10000,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "gin-rocks",
+      "grupo": "Energético",
+      "nome": "Bally",
+      "preco": 7000,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "gin-eternity-invictus",
+      "grupo": "Gin",
+      "nome": "Eternity",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "gin-eternity-invictus",
+      "grupo": "Gin",
+      "nome": "Invictus",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "gin-eternity-invictus",
+      "grupo": "Energético",
+      "nome": "Red Bull",
+      "preco": 8000,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "gin-eternity-invictus",
+      "grupo": "Energético",
+      "nome": "Bally",
+      "preco": 5000,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "dose-cavalo-branco",
+      "grupo": "Energético",
+      "nome": "Vibe",
+      "preco": 2500,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "dose-cavalo-branco",
+      "grupo": "Energético",
+      "nome": "Red Bull",
+      "preco": 3000,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "dose-ballantines",
+      "grupo": "Energético",
+      "nome": "Vibe",
+      "preco": 2500,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "dose-ballantines",
+      "grupo": "Energético",
+      "nome": "Red Bull",
+      "preco": 3000,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "dose-red-label",
+      "grupo": "Energético",
+      "nome": "Vibe",
+      "preco": 3000,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "dose-red-label",
+      "grupo": "Energético",
+      "nome": "Red Bull",
+      "preco": 3500,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "refri-lata",
+      "grupo": "Sabor",
+      "nome": "Coca-Cola",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "refri-lata",
+      "grupo": "Sabor",
+      "nome": "Coca-Cola Zero",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "refri-lata",
+      "grupo": "Sabor",
+      "nome": "Guaraná Antarctica",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "refri-lata",
+      "grupo": "Sabor",
+      "nome": "Sprite",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "refri-lata",
+      "grupo": "Sabor",
+      "nome": "Fanta Laranja",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "refri-lata",
+      "grupo": "Sabor",
+      "nome": "Fanta Uva",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "fanta-2l",
+      "grupo": "Sabor",
+      "nome": "Laranja",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "fanta-2l",
+      "grupo": "Sabor",
+      "nome": "Uva",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "sprite-guarana-2l",
+      "grupo": "Sabor",
+      "nome": "Sprite",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "sprite-guarana-2l",
+      "grupo": "Sabor",
+      "nome": "Guaraná Antarctica",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "dolly-2l",
+      "grupo": "Sabor",
+      "nome": "Limão",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "dolly-2l",
+      "grupo": "Sabor",
+      "nome": "Guaraná",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "dolly-2l",
+      "grupo": "Sabor",
+      "nome": "Laranja",
+      "preco": null,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "essencia-ziggy",
+      "grupo": "Sabor",
+      "nome": "Pink Lemonade",
+      "preco": null,
+      "disponivel": true,
+      "imagem": "assets/img/loja/ziggy-pink-lemonade.webp"
+    },
+    {
+      "produto_id": "essencia-ziggy",
+      "grupo": "Sabor",
+      "nome": "Abacaxi Tropical",
+      "preco": null,
+      "disponivel": true,
+      "imagem": "assets/img/sabores/abacaxi.webp"
+    },
+    {
+      "produto_id": "essencia-ziggy",
+      "grupo": "Sabor",
+      "nome": "Açaí",
+      "preco": null,
+      "disponivel": true,
+      "imagem": "assets/img/sabores/acai.webp"
+    },
+    {
+      "produto_id": "essencia-ziggy",
+      "grupo": "Sabor",
+      "nome": "Banana Tropical",
+      "preco": null,
+      "disponivel": true,
+      "imagem": "assets/img/sabores/banana.webp"
+    },
+    {
+      "produto_id": "essencia-ziggy",
+      "grupo": "Sabor",
+      "nome": "Coco Tropical",
+      "preco": null,
+      "disponivel": true,
+      "imagem": "assets/img/sabores/coco.webp"
+    },
+    {
+      "produto_id": "essencia-ziggy",
+      "grupo": "Sabor",
+      "nome": "Cereja",
+      "preco": null,
+      "disponivel": true,
+      "imagem": "assets/img/sabores/cereja.webp"
+    },
+    {
+      "produto_id": "essencia-ziggy",
+      "grupo": "Sabor",
+      "nome": "Grape Starburst",
+      "preco": null,
+      "disponivel": true,
+      "imagem": "assets/img/sabores/uva.webp"
+    },
+    {
+      "produto_id": "essencia-ziggy",
+      "grupo": "Sabor",
+      "nome": "Happy Berry",
+      "preco": null,
+      "disponivel": true,
+      "imagem": "assets/img/loja/ziggy-happy-berry.webp"
+    },
+    {
+      "produto_id": "essencia-ziggy",
+      "grupo": "Sabor",
+      "nome": "Happy Frutti",
+      "preco": null,
+      "disponivel": true,
+      "imagem": "assets/img/loja/ziggy-happy-frutti.webp"
+    },
+    {
+      "produto_id": "essencia-ziggy",
+      "grupo": "Sabor",
+      "nome": "Laranjola Tropical",
+      "preco": null,
+      "disponivel": true,
+      "imagem": "assets/img/sabores/laranja.webp"
+    },
+    {
+      "produto_id": "essencia-ziggy",
+      "grupo": "Sabor",
+      "nome": "Limão",
+      "preco": null,
+      "disponivel": true,
+      "imagem": "assets/img/sabores/limao.webp"
+    },
+    {
+      "produto_id": "essencia-ziggy",
+      "grupo": "Sabor",
+      "nome": "Manga Tropical",
+      "preco": null,
+      "disponivel": true,
+      "imagem": "assets/img/sabores/manga.webp"
+    },
+    {
+      "produto_id": "essencia-ziggy",
+      "grupo": "Sabor",
+      "nome": "Maracujá",
+      "preco": null,
+      "disponivel": true,
+      "imagem": "assets/img/sabores/maracuja.webp"
+    },
+    {
+      "produto_id": "essencia-ziggy",
+      "grupo": "Sabor",
+      "nome": "Menta",
+      "preco": null,
+      "disponivel": true,
+      "imagem": "assets/img/sabores/menta.webp"
+    },
+    {
+      "produto_id": "essencia-ziggy",
+      "grupo": "Sabor",
+      "nome": "Red Lemonade",
+      "preco": null,
+      "disponivel": true,
+      "imagem": "assets/img/sabores/limonada-vermelha.webp"
+    },
+    {
+      "produto_id": "essencia-ziggy",
+      "grupo": "Sabor",
+      "nome": "Sorvete de Pistache",
+      "preco": null,
+      "disponivel": true,
+      "imagem": "assets/img/sabores/sorvete-pistache.webp"
+    },
+    {
+      "produto_id": "essencia-ziggy",
+      "grupo": "Sabor",
+      "nome": "Tanger Bomb",
+      "preco": null,
+      "disponivel": true,
+      "imagem": "assets/img/sabores/tangerina.webp"
+    },
+    {
+      "produto_id": "essencia-ziggy",
+      "grupo": "Sabor",
+      "nome": "Tropical",
+      "preco": null,
+      "disponivel": true,
+      "imagem": "assets/img/loja/ziggy-tropical.webp"
+    },
+    {
+      "produto_id": "essencia-ziggy",
+      "grupo": "Sabor",
+      "nome": "Watermelon Bomb",
+      "preco": null,
+      "disponivel": true,
+      "imagem": "assets/img/sabores/melancia.webp"
+    },
+    {
+      "produto_id": "essencia-ziggy",
+      "grupo": "Sabor",
+      "nome": "Yogurt",
+      "preco": null,
+      "disponivel": true,
+      "imagem": "assets/img/sabores/iogurte.webp"
+    },
+    {
+      "produto_id": "carvao-narguile",
+      "grupo": "Quantidade",
+      "nome": "Unidade",
+      "preco": 150,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "carvao-narguile",
+      "grupo": "Quantidade",
+      "nome": "Caixa",
+      "preco": 2500,
+      "disponivel": true,
+      "imagem": ""
+    },
+    {
+      "produto_id": "essencia-onix",
+      "grupo": "Sabor",
+      "nome": "Coke",
+      "preco": null,
+      "disponivel": true,
+      "imagem": "assets/img/loja/onix-coke.webp"
+    },
+    {
+      "produto_id": "essencia-onix",
+      "grupo": "Sabor",
+      "nome": "Drops",
+      "preco": null,
+      "disponivel": true,
+      "imagem": "assets/img/loja/onix-drops.webp"
+    },
+    {
+      "produto_id": "essencia-onix",
+      "grupo": "Sabor",
+      "nome": "Kiwi Drops",
+      "preco": null,
+      "disponivel": true,
+      "imagem": "assets/img/loja/onix-kiwi-drops.webp"
+    },
+    {
+      "produto_id": "essencia-onix",
+      "grupo": "Sabor",
+      "nome": "Purple Drops",
+      "preco": null,
+      "disponivel": true,
+      "imagem": "assets/img/loja/onix-purple-drops.webp"
+    },
+    {
+      "produto_id": "essencia-onix",
+      "grupo": "Sabor",
+      "nome": "Red Drops",
+      "preco": null,
+      "disponivel": true,
+      "imagem": "assets/img/loja/onix-red-drops.webp"
+    },
+    {
+      "produto_id": "essencia-onix",
+      "grupo": "Sabor",
+      "nome": "Goiaba e Morango",
+      "preco": null,
+      "disponivel": true,
+      "imagem": "assets/img/loja/onix-goiaba-morango.webp"
+    },
+    {
+      "produto_id": "essencia-onix",
+      "grupo": "Sabor",
+      "nome": "Melão",
+      "preco": null,
+      "disponivel": true,
+      "imagem": "assets/img/loja/onix-melao.webp"
+    }
+  ]
+}

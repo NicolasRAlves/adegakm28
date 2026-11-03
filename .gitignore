@@ -1,0 +1,11 @@
+# Material bruto do cliente (logo com personagem de terceiros e artes originais): não vai para o repositório
+material-cliente/
+
+# Prints dos testes automáticos (gerados de novo a cada execução)
+ferramentas/prints/
+
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
