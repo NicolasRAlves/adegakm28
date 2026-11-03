@@ -820,7 +820,7 @@ body {
   border-top: 1px solid rgba(224, 178, 90, .22);
 }
 @media (min-width: 1024px) { .secao-destaques { margin-inline: 0; padding-inline: 16px; border-radius: 18px; } }
-.lista .carrossel .item { background: linear-gradient(180deg, #24161B, #17131A); border-color: rgba(224, 178, 90, .2); }
+.lista .carrossel .item { background: linear-gradient(180deg, #1F1F23, #161619); border-color: rgba(224, 178, 90, .22); }
 /* fotos de embalagem (fundo branco) ficam num cartão claro */
 .item.com-foto .item-icone { background: #fff; border-color: rgba(255, 255, 255, .15); }
 /* hero com borda dourada metálica */
@@ -870,3 +870,7 @@ body {
 
 /* acentos (É, Á) não podem ser cortados no título da capa */
 .capa-titulo { overflow: visible; padding-top: .14em; }
+
+/* destaques: sem painel de fundo (só o carrossel) */
+.secao-destaques { background: none; border-top: 0; margin: 0; padding: 14px 0 0; }
+@media (min-width: 1024px) { .secao-destaques { margin: 0; padding: 14px 0 0; } }

@@ -141,17 +141,14 @@ export function htmlCatalogo(categorias, qtd = () => 0) {
   const mais = todos.filter((p) => p.destaque === 'mais-pedido');
   const promo = todos.filter((p) => p.destaque === 'promo' || p.destaque === 'promocao');
   const alcoolDestaque = [...novidades, ...mais, ...promo].some((p) => porId(p.categoria)?.alcool !== false);
-  const carrossel = (titulo, ic, lista) => (lista.length ? `
-    <div class="carrossel-bloco">
-      <h3 class="carrossel-titulo">${icone(ic)}${titulo}</h3>
-      <div class="itens carrossel">${itens(lista, null, false)}</div>
-    </div>` : '');
+  // uma linha só: promoções primeiro, depois novidades e mais pedidos (cada cartão tem o seu selo)
+  const destaques = [...promo, ...novidades, ...mais];
   let lista = '';
-  if (novidades.length || mais.length || promo.length) {
+  if (destaques.length) {
     lista += `<section class="secao secao-destaques" id="destaques" aria-labelledby="t-destaques"${alcoolDestaque ? ' data-alcool="1"' : ''}>
       <div class="secao-topo"><h2 id="t-destaques">Destaques</h2>
         <button type="button" class="btn-compartilhar" data-acao="compartilhar-cat" data-cat="destaques" data-nome="Destaques" aria-label="Compartilhar Destaques">${icone('i-compartilhar')}</button></div>
-      ${carrossel('Novidades', 'i-estrela', novidades)}${carrossel('Mais pedidos', 'i-fogo', mais)}${carrossel('Em promoção', 'i-etiqueta', promo)}
+      <div class="itens carrossel">${itens(destaques, null, false)}</div>
     </section>`;
   }
   lista += categorias.map((c) => secao(c.id, c.nome, c.produtos, c)).join('');
