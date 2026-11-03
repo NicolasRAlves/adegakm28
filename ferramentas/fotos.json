@@ -59,11 +59,15 @@
   "q": 0.62
  },
  "assets/img/home/cat-cervejas.webp": {
-  "titulo": "File:Green bottle of Heineken 2.JPG",
+  "url": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RpZgU4j5C-TwzvAr-K1FNBONmgqJgIaxL28lLXbdpR63SVuwPFO3DrI8oVEACO87J8G2lapDeVmRUFP8-tifg68WVlWw1sC3c-cW9ubPSDMpADlIJxFcwNKqqqMMw9SPZ6wWk=s680-w680-h510-rw",
+  "titulo": "Cervejas Corona (capa)",
+  "autor": "foto enviada pelo cliente",
+  "licenca": "uso autorizado",
+  "pagina": "https://www.google.com/maps",
   "w": 360,
   "h": 240,
   "foco": "50% 50%",
-  "q": 0.66
+  "q": 0.7
  },
  "assets/img/home/cat-whisky.webp": {
   "titulo": "File:Giant ice cube in whiskey glass (18495546988).jpg",
@@ -765,6 +769,55 @@
   "autor": "foto enviada pelo cliente",
   "licenca": "uso autorizado",
   "pagina": "https://www.google.com/maps",
+  "w": 960,
+  "h": 400,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/home/capa-whisky.webp": {
+  "titulo": "File:Giant ice cube in whiskey glass (18495546988).jpg",
+  "w": 960,
+  "h": 400,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/home/capa-gin.webp": {
+  "titulo": "File:Gin and tonic with lime.jpg",
+  "w": 960,
+  "h": 400,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/home/capa-doses.webp": {
+  "titulo": "File:Whiskey with spherical ice.jpg",
+  "w": 960,
+  "h": 400,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/home/capa-narguile.webp": {
+  "titulo": "File:A hand carefully arranges charcoal pieces on a hookah bowl, readying it for use.jpg",
+  "w": 960,
+  "h": 400,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/home/capa-refri.webp": {
+  "titulo": "File:Fanta cans in Thailand 2021.jpg",
+  "w": 960,
+  "h": 400,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/home/capa-aguas.webp": {
+  "titulo": "File:Bisleri PET water bottles with Telugu labels.jpg",
+  "w": 960,
+  "h": 400,
+  "foco": "50% 50%",
+  "q": 0.7
+ },
+ "assets/img/home/capa-mercearia.webp": {
+  "titulo": "File:073 Potato chips, Sanok.JPG",
   "w": 960,
   "h": 400,
   "foco": "50% 50%",

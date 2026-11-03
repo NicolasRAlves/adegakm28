@@ -48,20 +48,20 @@ export const CONFIG = {
   // detalheNaMensagem: inclui o detalhe ("lata · pack com 8") na mensagem.
   categorias: [
     { id: 'cervejas', foto: 'assets/img/home/cat-cervejas.webp', capa: 'assets/img/home/capa-cervejas.webp', nome: 'Cervejas', icone: 'lata', alcool: true, detalheNaMensagem: true },
-    { id: 'combos-whisky', foto: 'assets/img/home/cat-whisky.webp', nome: 'Combos Whisky', icone: 'garrafa', alcool: true, prefixo: 'Combo',
+    { id: 'combos-whisky', foto: 'assets/img/home/cat-whisky.webp', capa: 'assets/img/home/capa-whisky.webp', nome: 'Combos Whisky', icone: 'garrafa', alcool: true, prefixo: 'Combo',
       nota: 'Garrafa + 4 Red Bull + 4 gelos de coco ou 1 saco de gelo 5 kg' },
-    { id: 'combos-gin', foto: 'assets/img/home/cat-gin.webp', nome: 'Combos Gin', icone: 'gin', alcool: true, prefixo: 'Combo',
+    { id: 'combos-gin', foto: 'assets/img/home/cat-gin.webp', capa: 'assets/img/home/capa-gin.webp', nome: 'Combos Gin', icone: 'gin', alcool: true, prefixo: 'Combo',
       nota: 'Todos acompanham gelo de coco + o energético que você escolher' },
-    { id: 'doses-whisky', foto: 'assets/img/home/cat-doses.webp', nome: 'Doses de Whisky', icone: 'dose', alcool: true, prefixo: 'Dose' },
+    { id: 'doses-whisky', foto: 'assets/img/home/cat-doses.webp', capa: 'assets/img/home/capa-doses.webp', nome: 'Doses de Whisky', icone: 'dose', alcool: true, prefixo: 'Dose' },
     // narguilé: essências (produtos com a tag "tabaco") + acessórios. Só 18+ (alcool: true).
     // mostrar_tabaco = NÃO na planilha esconde as essências e os cigarros; os acessórios continuam.
-    { id: 'narguile', foto: 'assets/img/home/cat-essencias.webp', nome: 'Narguilé e Essências', icone: 'narguile', alcool: true,
+    { id: 'narguile', foto: 'assets/img/home/cat-essencias.webp', capa: 'assets/img/home/capa-narguile.webp', nome: 'Narguilé e Essências', icone: 'narguile', alcool: true,
       nota: 'Essências (escolha a marca e veja os sabores), carvão, rosh, abafador, alumínio e narguilé completo. Venda proibida para menores de 18 anos. O Ministério da Saúde adverte: fumar faz mal à saúde.' },
     { id: 'cigarros', nome: 'Cigarros', icone: 'cigarro', alcool: true, tabaco: true,
       nota: 'Venda proibida para menores de 18 anos. O Ministério da Saúde adverte: fumar causa câncer de pulmão.' },
-    { id: 'refrigerantes', foto: 'assets/img/home/cat-refri.webp', nome: 'Refrigerantes', icone: 'refri', alcool: false },
-    { id: 'agua', foto: 'assets/img/home/cat-aguas.webp', nome: 'Águas e sem álcool', icone: 'refri', alcool: false },
-    { id: 'mercearia', foto: 'assets/img/home/cat-mercearia.webp', nome: 'Mercearia', icone: 'petisco', alcool: false },
+    { id: 'refrigerantes', foto: 'assets/img/home/cat-refri.webp', capa: 'assets/img/home/capa-refri.webp', nome: 'Refrigerantes', icone: 'refri', alcool: false },
+    { id: 'agua', foto: 'assets/img/home/cat-aguas.webp', capa: 'assets/img/home/capa-aguas.webp', nome: 'Águas e sem álcool', icone: 'refri', alcool: false },
+    { id: 'mercearia', foto: 'assets/img/home/cat-mercearia.webp', capa: 'assets/img/home/capa-mercearia.webp', nome: 'Mercearia', icone: 'petisco', alcool: false },
     { id: 'energeticos', nome: 'Energéticos', icone: 'lata', alcool: false },
     { id: 'gelo', nome: 'Gelo', icone: 'gelo', alcool: false },
     { id: 'destilados', nome: 'Destilados', icone: 'garrafa', alcool: true },

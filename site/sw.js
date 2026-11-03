@@ -1,6 +1,6 @@
 // Service worker: abre rápido e funciona com sinal fraco.
 // Ao mudar arquivos do site, aumente a VERSAO para os celulares baixarem a nova versão.
-const VERSAO = 'km28-v8';
+const VERSAO = 'km28-v10';
 const BASE = [
   './',
   'index.html',

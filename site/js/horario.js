@@ -56,14 +56,14 @@ export function statusEm({ dia, minutos }, horarios, forcado = 'auto') {
   // próxima abertura
   if (hoje && minutos < hoje.abre) {
     const h = formatarHora(hoje.abre);
-    return { aberto: false, texto: `Fechado · abre hoje às ${h}`, curto: `Fechado · abre ${h}` };
+    return { aberto: false, texto: `Fechado · abre hoje às ${h}`, curto: `Abre hoje ${h}` };
   }
   for (let i = 1; i <= 7; i++) {
     const d = (dia + i) % 7;
     if (horarios[d]) {
       const quando = i === 1 ? 'amanhã' : DIAS[d];
       const h = formatarHora(horarios[d].abre);
-      return { aberto: false, texto: `Fechado · abre ${quando} às ${h}`, curto: `Fechado · abre ${quando} ${h}` };
+      return { aberto: false, texto: `Fechado · abre ${quando} às ${h}`, curto: `Abre ${quando} ${h}` };
     }
   }
   return { aberto: false, texto: 'Fechado', curto: 'Fechado' };

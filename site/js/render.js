@@ -114,9 +114,12 @@ export function htmlCatalogo(categorias, qtd = () => 0) {
       corpo = itens(produtos, cat, true);
     }
     const qtdTxt = `${produtos.length} ${produtos.length === 1 ? 'item' : 'itens'}`;
-    // capa: banner com foto e o nome da categoria em letras grandes
-    const capa = cat?.capa ? `<div class="secao-capa" aria-hidden="true">
-      <img src="${esc(cat.capa)}" alt="" width="960" height="400" loading="lazy" decoding="async">
+    // capa: banner com foto e o nome da categoria em letras grandes (sem foto: só degradê)
+    // --n = "largura" do título em letras; nomes longos quebram em duas linhas
+    const longo = nome.length > 14;
+    const n = longo ? Math.max(...nome.split(/\s+/).map((w) => w.length), Math.ceil(nome.length / 2)) : nome.length;
+    const capa = cat ? `<div class="secao-capa${cat.capa ? '' : ' sem-foto'}${longo ? ' duas-linhas' : ''}" style="--n:${n};--linhas:${longo ? 2 : 1}" aria-hidden="true">
+      ${cat.capa ? `<img src="${esc(cat.capa)}" alt="" width="960" height="400" loading="lazy" decoding="async">` : icone(`i-${cat.icone || 'garrafa'}`, 'capa-icone')}
       <span class="capa-titulo">${esc(nome)}</span>
       <span class="capa-qtd">${qtdTxt}</span>
     </div>` : '';

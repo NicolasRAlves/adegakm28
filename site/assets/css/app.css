@@ -837,7 +837,7 @@ body {
    ===================================================================== */
 .secao-capa {
   position: relative; margin: 14px 0 4px; border-radius: 18px; overflow: hidden;
-  height: clamp(150px, 42vw, 340px); isolation: isolate;
+  height: clamp(150px, 42vw, 340px); isolation: isolate; container-type: inline-size;
   border: 1px solid transparent; background: linear-gradient(#000, #000) padding-box, var(--ouro-grad) border-box;
   box-shadow: 0 16px 36px rgba(0, 0, 0, .5);
 }
@@ -849,7 +849,9 @@ body {
 }
 .capa-titulo {
   position: absolute; left: 14px; right: 14px; bottom: 6px;
-  font: 400 clamp(64px, 21vw, 150px)/.8 var(--fonte-titulo); letter-spacing: .01em; text-transform: uppercase;
+  font: 400 clamp(40px, 21vw, 150px)/.8 var(--fonte-titulo); letter-spacing: .01em; text-transform: uppercase;
+  /* cabe na largura (pela quantidade de letras) e na altura (pelo número de linhas), sem bater no selo de itens */
+  font-size: max(30px, min(calc((100cqw - 28px) / (var(--n, 8) * .45)), calc((42cqw - 56px) / (var(--linhas, 1) * .82)), 160px));
   color: #fff; text-shadow: 0 6px 30px rgba(0, 0, 0, .55); white-space: nowrap; overflow: hidden;
 }
 .capa-qtd {
@@ -859,3 +861,12 @@ body {
 /* com capa, o título da linha de baixo fica só para leitores de tela (a capa já mostra o nome) */
 .com-capa .secao-topo h2, .com-capa .secao-topo .qtd { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 .com-capa .secao-topo { justify-content: flex-end; padding-bottom: 0; margin-top: -4px; }
+
+/* capa: nome longo em duas linhas; categoria sem foto ganha degradê e ícone grande */
+.secao-capa.duas-linhas .capa-titulo { white-space: normal; line-height: .82; }
+.secao-capa.sem-foto { background: linear-gradient(135deg, #2A1018 0%, #120A0D 55%, #0C0C0C 100%) padding-box, var(--ouro-grad) border-box; }
+.secao-capa.sem-foto::before { background: radial-gradient(60% 90% at 85% 40%, rgba(224, 178, 90, .22), transparent 70%); }
+.capa-icone { position: absolute; right: 6%; top: 50%; transform: translateY(-50%); width: 38%; height: 80%; color: rgba(224, 178, 90, .35); stroke-width: .9; z-index: -1; }
+
+/* acentos (É, Á) não podem ser cortados no título da capa */
+.capa-titulo { overflow: visible; padding-top: .14em; }

@@ -73,11 +73,11 @@
  },
  {
   "arquivo": "assets/img/home/cat-cervejas.webp",
-  "titulo": "Green bottle of Heineken 2.JPG",
-  "autor": "Nicholas Gemini",
-  "licenca": "CC BY-SA 3.0",
-  "licencaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-  "fonte": "https://commons.wikimedia.org/wiki/File:Green_bottle_of_Heineken_2.JPG"
+  "titulo": "Cervejas Corona (capa)",
+  "autor": "foto enviada pelo cliente",
+  "licenca": "uso autorizado",
+  "licencaUrl": "",
+  "fonte": "https://www.google.com/maps"
  },
  {
   "arquivo": "assets/img/home/cat-whisky.webp",
@@ -670,5 +670,61 @@
   "licenca": "uso autorizado",
   "licencaUrl": "",
   "fonte": "https://www.google.com/maps"
+ },
+ {
+  "arquivo": "assets/img/home/capa-whisky.webp",
+  "titulo": "Giant ice cube in whiskey glass (18495546988).jpg",
+  "autor": "Personal Creations",
+  "licenca": "CC BY 2.0",
+  "licencaUrl": "https://creativecommons.org/licenses/by/2.0",
+  "fonte": "https://commons.wikimedia.org/wiki/File:Giant_ice_cube_in_whiskey_glass_(18495546988).jpg"
+ },
+ {
+  "arquivo": "assets/img/home/capa-gin.webp",
+  "titulo": "Gin and tonic with lime.jpg",
+  "autor": "NotFromUtrecht",
+  "licenca": "CC BY-SA 3.0",
+  "licencaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "fonte": "https://commons.wikimedia.org/wiki/File:Gin_and_tonic_with_lime.jpg"
+ },
+ {
+  "arquivo": "assets/img/home/capa-doses.webp",
+  "titulo": "Whiskey with spherical ice.jpg",
+  "autor": "MarlanUI",
+  "licenca": "CC BY-SA 4.0",
+  "licencaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "fonte": "https://commons.wikimedia.org/wiki/File:Whiskey_with_spherical_ice.jpg"
+ },
+ {
+  "arquivo": "assets/img/home/capa-narguile.webp",
+  "titulo": "A hand carefully arranges charcoal pieces on a hookah bowl, readying it for use.jpg",
+  "autor": "Shixart1985",
+  "licenca": "CC BY 2.0",
+  "licencaUrl": "https://creativecommons.org/licenses/by/2.0",
+  "fonte": "https://commons.wikimedia.org/wiki/File:A_hand_carefully_arranges_charcoal_pieces_on_a_hookah_bowl,_readying_it_for_use.jpg"
+ },
+ {
+  "arquivo": "assets/img/home/capa-refri.webp",
+  "titulo": "Fanta cans in Thailand 2021.jpg",
+  "autor": "Chainwit.",
+  "licenca": "CC BY-SA 4.0",
+  "licencaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "fonte": "https://commons.wikimedia.org/wiki/File:Fanta_cans_in_Thailand_2021.jpg"
+ },
+ {
+  "arquivo": "assets/img/home/capa-aguas.webp",
+  "titulo": "Bisleri PET water bottles with Telugu labels.jpg",
+  "autor": "Veeven",
+  "licenca": "CC BY-SA 4.0",
+  "licencaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "fonte": "https://commons.wikimedia.org/wiki/File:Bisleri_PET_water_bottles_with_Telugu_labels.jpg"
+ },
+ {
+  "arquivo": "assets/img/home/capa-mercearia.webp",
+  "titulo": "073 Potato chips, Sanok.JPG",
+  "autor": "Silar",
+  "licenca": "CC BY-SA 3.0",
+  "licencaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "fonte": "https://commons.wikimedia.org/wiki/File:073_Potato_chips,_Sanok.JPG"
  }
 ]
